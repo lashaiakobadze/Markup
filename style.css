@@ -34,6 +34,12 @@ ol, ul {
     margin: 0;
     list-style-type: none;
 }
+
+p {
+    margin: 0;
+    font-size: 1.7rem;
+    color: #454545;
+}
 /* გავსტილოთ html თაგი */
 html {
     font-size: 10px;
@@ -1274,6 +1280,12 @@ input[type=checkbox], input[type=radio] {
     }
 }
 
+@media (min-width: 1000px){
+    .footer-contact .container{
+        max-width: 1100px;
+    }
+}
+
 /* fotter-ის მარცხენა კაონტეინერის გასტილვა */
 .col-12 {
     flex: 0 0 100%;
@@ -1291,7 +1303,6 @@ input[type=checkbox], input[type=radio] {
     .col-lg-8 {
         flex: 0 0 66.6666666667%;
         max-width: 66.6666666667%;
-        margin-left: 5rem;
     }
 }
 
@@ -1347,7 +1358,7 @@ input[type=checkbox], input[type=radio] {
 
 /* გავსტილოთ footer-ის მარჯვენა კონტეინერი */
 .social-contact{
-    margin-right: 5rem;
+    margin-right: 2rem;
 }
 
 .footer-contact .social-contact{
@@ -1401,6 +1412,383 @@ a .fa-instagram{
 a .fa-behance{
     color: #4176FA;
 }
+
+/* გავსტილოთ footer-ის მეორე სექცია ფორმა */
+.footer-form {
+    background: linear-gradient(180deg,#f8f8f8 50%,#27376c 0);
+} 
+
+@media (min-width: 1000px){
+    .footer-form .container{
+        max-width: 1100px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .footer-form .container {
+        padding: 0;
+    }
+}
+
+
+.footer-form .box{
+    position: relative;
+    padding: 3.5rem 2rem;
+    color: #454545;
+    background-color: #fff;
+    box-shadow: 0 19px 22px rgba(0,0,0,.08);
+}
+
+@media (min-width: 768px){
+    .footer-form .box {
+        padding: 3.5rem 4.5rem;
+        border-radius: 10px;
+    }
+}
+
+/* გავსტილოთ ფორმა */
+@media (min-width: 768px){
+    .footer-form .icon {
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px){
+    .d-none {
+        display: none!important;
+    }
+}
+
+
+.col-lg-4{
+    position: relative;
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+@media (min-width: 992px){
+    .col-lg-4 {
+        flex: 0 0 33.3333333333%;
+        max-width: 33.3333333333%;
+    }
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.mb-5, .my-5 {
+    margin-bottom: 3rem!important;
+}
+
+@media (min-width: 992px){
+    .mb-lg-0, .my-lg-0 {
+        margin-bottom: 0!important;
+    }
+}
+
+
+@media (min-width: 768px){
+    .text-md-left {
+    text-align: left!important;
+    }
+}
+
+.mb-2, .my-2 {
+    margin-bottom: .5rem!important;
+}
+
+@media (min-width: 768px){
+    .d-md-none {
+        display: none!important;
+    }
+}
+
+
+.footer-form .headline {
+    margin-bottom: 1rem;
+    font-size: 2.7rem;
+    font-weight: 400;
+    color: #27376c;
+}  
+
+@media (min-width: 768px){
+    .footer-form .headline {
+        font-size: 3.3rem;
+    }
+}
+
+.headline:after {
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 0;
+    color: #ec008c;
+    content: ".";
+}
+
+.footer-form .content p {
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+/* გავსტილოთ  footer-ის ფორმის ველები და ღილაკი */
+.foot-form-con{
+    position: relative;
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+@media (min-width: 992px){
+    .foot-form-con-1 {
+    padding-left: 3rem!important;
+    }
+}
+
+@media (min-width: 992px){
+    .foot-form-con {
+        flex: 0 0 66.6666666667%;
+        max-width: 66.6666666667%;
+    }
+}
+
+.align-self-end {
+    align-self: flex-end!important;
+}
+
+@media (min-width: 576px){
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.footer-form .input-field {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 576px){
+    .footer-form  .input-field {
+        margin-bottom: 2rem;
+    }
+}
+
+
+.footer-form .input-field input{
+    box-sizing: content-box;
+    display: block;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #454545;
+    background-color: transparent;
+    border: none;
+    border-bottom: .1rem solid #e3e3e3;
+    outline: none;
+    box-shadow: none;
+    transition: all .3s;
+}
+
+
+.footer-form .input-field label {
+    position: absolute;
+    top: .8rem;
+    left: 0;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #454545;
+    pointer-events: none;
+    cursor: text;
+    transition: .2s ease-out;
+}
+
+.footer-form .input-field input {
+    font-size: 1.7rem;
+}
+
+.footer-form .input-field label:not(.active) {
+    padding-bottom: .9rem;
+    font-size: 1.7rem;
+}
+
+@media (max-width: 767.98px){
+    .footer-form .input-field label {
+    font-size: 1.8rem;
+    }
+}
+
+.footer-form .input-field label span {
+    color: #ec008c;
+    font-size: x-small;
+}
+
+/*ღილაკის გასტილვა*/
+.col-lg-3{
+    position: relative;
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+@media (min-width: 992px){
+    .col-lg-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 992px){
+    .text-lg-left {
+        text-align: left!important;
+    }
+}
+
+
+@media (max-width: 767.98px){
+    .footer-form .button {
+    display: block;
+    width: 100%;
+    }
+}
+
+.svg-container:not(.no-color) svg [fill*="#"]:not(.noColor){
+    fill: currentColor!important;
+    transition: fill .5s ease;
+}
+
+.footer-form .legal {
+    margin-top: 1.5rem;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+    color: #454545;
+}
+
+.footer-form .legal a {
+    font-family: sans-serif;
+    text-decoration: underline;
+}
+
+/* გავსტილოთ footer-ის მესამე სექცია */
+.footer-privacy{
+    padding: 4.3rem 0;
+    background: #27376c;
+}
+
+.last-footer{
+
+}
+
+.col-12, .col-sm-6, .col-lg-8{
+    position: relative;
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+@media (min-width: 992px){
+    .col-lg-8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+    }
+}
+
+@media (min-width: 576px){
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.footer__rights__copy p {
+    font-size: 1.7rem;
+    line-height: 1.471;
+    color: #7d8bbc;
+}
+
+@media (min-width: 768px)
+{
+    .d-md-none {
+    display: none!important;
+    }
+}
+
+.footer__rights__copy ul {
+    padding: 0;
+    margin: 1.5rem 0;
+    font-size: 0;
+}
+
+.footer__rights__copy ul li {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+}
+
+.footer__rights__copy ul li a {
+    padding-right: 1.3rem;
+    font-size: 1.4rem;
+    color: #7d8bbc;
+}
+
+.footer__rights__copy ul li:not(:first-child):before {
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    display: block;
+    width: .3rem;
+    height: .3rem;
+    content: "";
+    background: #7d8bbc;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.footer__rights__copy ul li a:hover {
+    color: #f24aad;
+}
+
+
+@media (min-width: 992px){
+    .col-lg {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+}
+
+.footer__back {
+    overflow: hidden;
+}
+
+@media (min-width: 576px){
+    .text-sm-right {
+    text-align: right!important;
+    }
+}
+
+ .blue-button{
+    color: #7d8bbc;
+    border: .2rem solid #7d8bbc;
+}
+
+.svg-container:not(.no-color) svg [fill*="#headerID"]:not(.noColor) {
+    fill: currentColor!important;
+    transition: fill .5s ease;
+}
+
+
+
+
+
+
+
 
 
 
