@@ -1778,6 +1778,10 @@ a .fa-behance{
     border: .2rem solid #7d8bbc;
 }
 
+.blue-button:hover{
+    background-color: #626985;
+}
+
 .svg-container:not(.no-color) svg [fill*="#headerID"]:not(.noColor) {
     fill: currentColor!important;
     transition: fill .5s ease;

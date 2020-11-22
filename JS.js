@@ -74,3 +74,4 @@ var newInput = `
     </div>`;
    document.getElementById('demo').innerHTML += newInput;
 }
+
