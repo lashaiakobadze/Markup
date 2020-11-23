@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 /*გავსტილოთ ზოგადი დანიშნულების სტილისტური მარეგულირებლები*/
 *, :after, :before {
@@ -10,9 +11,6 @@ a, a:focus, a:hover {
 
 a {
     color: #ec008c;
-}
-
-a {
     color: #f24aad;
     background-color: transparent;
 }
@@ -25,7 +23,7 @@ img, svg {
     vertical-align: middle;
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+aside, footer, header, nav, section {
     display: block;
 }
 
@@ -37,28 +35,18 @@ ol, ul {
 
 p {
     margin: 0;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: #454545;
 }
-/* გავსტილოთ html თაგი */
-html {
-    font-size: 10px;
-    touch-action: manipulation;
-}
+
 
 html {
     font-size: 10px;
     touch-action: manipulation;
-}
-
-html {
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-html {
     display: block;
 }
 
@@ -66,48 +54,9 @@ head {
     display: none;
 }
 
-/* შემოვიტანოთ გლობალური ცვლადები */
-:root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-}
-
-:root {
-    --wp-admin-theme-color: #007cba;
-    --wp-admin-theme-color-darker-10: #006ba1;
-    --wp-admin-theme-color-darker-20: #005a87;
-}
-
-/* გავსტილოთ გვერდის ტანი */
 body{
     position: relative;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Poppins", sans-serif;
     margin:0;
     font-size: 1.6rem;
     color: #333;
@@ -116,9 +65,10 @@ body{
     -webkit-overflow-scrolling: touch;
 }
 
-/* გავსტილოთ ჰედერი*/
+
+/**************************** გავსტილოთ ჰედერი ***************************************/
 .header {
-   /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
     margin: 0;
@@ -128,6 +78,7 @@ body{
     padding: 4rem 0;
     background-image: url(./Assets/header-background.jpg);
 }
+
 
 /*გავსტილოთ მთავარი სანავიგაციო ელემენტი ჰედერში */
 .header .navigation{
@@ -140,11 +91,12 @@ body{
     overflow: hidden;
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 770px){
     .header .navigation{
         padding: 0 1.5rem;
     }
 }
+
 
 /* გავსტილოთ ლოგო */
 .main-logo {
@@ -158,7 +110,7 @@ body{
     display: inline-block;
 }
 
-.main-logo .logo-vector{
+.main-logo .logo-size{
     width: 20rem;
     height: 6rem;
 }
@@ -178,12 +130,13 @@ body{
     height: inherit;
 }
 
+
 /* გავსტილოთ ჰედერის ნავგაცია */
 .header-nav .nav-list li {
     display: inline-block;
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .header-nav {
         position: fixed;
         top: 0;
@@ -199,7 +152,7 @@ body{
     }
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 770px){
     .header-nav {
         padding-top: 11rem;
     }
@@ -211,7 +164,7 @@ body{
     }
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .header-nav .nav-list li {
     display: block;
     }
@@ -221,7 +174,7 @@ body{
 .header-nav .nav-list li a {
     position: relative;
     padding: .8rem 2.5rem;
-    font-family: Proxima Nova Semibold,sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.8rem;
     color: #fff;
     border-bottom: .2rem solid transparent;
@@ -235,7 +188,7 @@ body{
     }
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .header-nav .nav-list li a{
         display: inline-block;
         width: auto;
@@ -244,14 +197,15 @@ body{
     }
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 770px){
     .header-nav .nav-list li a{
         font-size: 2.6rem;
     }
 }
 
+
 /*დავამატოთ svg ელემენტები ნავიგაციასთან მისვლის დროს */
-@media (min-width: 992px)
+@media (min-width: 990px)
 {
     .header-nav .nav-list li a:after, .header-nav .nav-list li a:before {
         position: absolute;
@@ -267,26 +221,27 @@ body{
     }
 }
 
-@media (min-width: 992px)
+@media (min-width: 990px)
 {
     .header-nav .nav-list li a:before {
     top: -.7rem;
     }
 }
 
-@media (min-width: 992px){
+@media (min-width: 990px){
     .header-nav .nav-list li a:after {
         bottom: -.7rem;
         transform: rotate(-180deg);
     }
 }
 
+
 /* გავსტილოთ ჰედერის ქვედა მხარე */
 .header .header-bottom{
     overflow: hidden;
 }
 
-.container{
+.main-container{
     width: 100%;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
@@ -294,42 +249,44 @@ body{
     margin-left: auto;
 }
 
-.header .header-bottom .container{
+.header .header-bottom .main-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-@media (min-width: 576px){
-    .container{
-        max-width: 576px;
+@media (min-width: 580px){
+    .main-container{
+        max-width: 580px;
     }
 }
 
 @media (min-width: 768px){
-    .container{
+    .main-container{
         max-width: 740px;
     }
 }
-/**/
-@media (max-width: 991.98px){
-    .header .header-bottom .container{
+
+@media (max-width: 989px){
+    .header .header-bottom .main-container{
         display: block;
     }
 }
 
 @media (min-width: 1000px){
-    .header-bottom .container{
-        max-width: 1220px;
+    .header-bottom .main-container{
+        max-width: 1200px;
     }
 }
+
+
 /*ჰედერის ქვედა მარცხება კუთხის გასტილვა*/
 .bottom-left{
     float: left;
     margin-left: 0rem;
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .bottom-left{
         float: none;
         margin-bottom: 6rem;
@@ -338,7 +295,7 @@ body{
     }
 }
 
-@media (max-width: 768.98px){
+@media (max-width: 770px){
     .bottom-left{
         float: none;
         margin-bottom: 4rem;
@@ -346,28 +303,29 @@ body{
         text-align:left;
     }
 }
+
 .bottom-left-h1{
     margin: 0 0 1.5rem;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 5.5rem;
     font-weight: 600;
     line-height: 1.1;
     color: #fff;
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .bottom-left-h1{
         margin: 0;
     }
 }
 
-@media (max-width: 767.98px){ 
+@media (max-width: 770px){ 
     .bottom-left-h1{
         font-size: 4.4rem;
     }
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 580px){
     .bottom-left-h1 {
     font-size: 4.6rem;
     }
@@ -377,13 +335,13 @@ body{
 .bottom-left-h1:after {
     font-size: 6rem;
     font-weight: 400;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Poppins", sans-serif;
     line-height: 0;
     color: #ec008c;
     content: ".";
 }
 
-@media (max-width: 767.98px)
+@media (max-width: 770px)
 {
     .bottom-left-h1:after {
     font-size: 4.5rem;
@@ -402,14 +360,14 @@ body{
     position: relative;
     float: left;
     padding: 0 1.6rem;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.7rem;
     line-height: 2.4rem;
     color: #cdd6f2;
 }
 
 .bottom-nav ul li a {
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.7rem;
     line-height: 2.4rem;
     color: #8e9dce;
@@ -430,7 +388,7 @@ body{
     top: -.1rem;
     right: -.4rem;
     z-index: 2;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     color: #8e9dce;
     content: "\BB";
 }
@@ -441,7 +399,7 @@ body{
     width: 60rem; 
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .bottom-right {
     float: none;
     width: auto;
@@ -455,7 +413,7 @@ body{
     text-align: right;
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .bottom-right p{
         text-align: left;
     }
@@ -473,6 +431,7 @@ body{
     }
 }
 
+
 /* გავსტილოთ ჩამოსაშლელი მენიუ, რომელიც ჰედერში გამოჩნდება რეზულოციის შემცირებისას */
 .header-menu{
     z-index: 103;
@@ -483,7 +442,7 @@ body{
     text-align: right;
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .header-menu{
         display: block;
     }
@@ -499,6 +458,8 @@ body{
     color: #fff;
     vertical-align: top;
 }
+
+
 /* გავსტილოთ ჩანისაშლელი მენიუს სამშრიანი სტილისტური ღილაკი */
 .button{
     display: inline-block;
@@ -605,7 +566,8 @@ body{
     transition-delay: 0s;
 }
 
-/* ვიწყებთ ჰედერის შემდგომი სექციის გასტილვას, რომელიც შეიცავს გვერდის საინფორმაციო ბმულებს */
+
+/*********ვიწყებთ ჰედერის შემდგომი სექციის გასტილვას, რომელიც შეიცავს გვერდის საინფორმაციო ბმულებს*******/
 .sec1{
     padding: 7rem 0;
     background: #f8f8f8;
@@ -613,21 +575,21 @@ body{
     display: block;
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .sec1{
         padding: 4.5rem 0;
     }
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 580px){
     .sec1{
         padding: 0;
     }
 }
 
 
-@media (min-width: 992px){
-    .container{
+@media (min-width: 990px){
+    .main-container{
         max-width: 1300px;
     }
 }
@@ -639,7 +601,6 @@ body{
     margin-left: -1.5rem;
 }
 
-
 .aside{
     position: relative;
     width: 100%;
@@ -649,14 +610,14 @@ body{
     max-width: 100%;
 }
 
-@media (min-width: 576px){
+@media (min-width: 580px){
     .aside{
         flex: 0 50%;
         max-width: 50%;
     }
 }
 
-@media (min-width: 992px){
+@media (min-width: 990px){
     .aside{
         flex: 0 0 25%;
         max-width: 25%;
@@ -665,7 +626,7 @@ body{
 
 
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .aside-block{
         margin: 2.5rem 0;
     }
@@ -680,7 +641,7 @@ body{
     border-radius: 50%;
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .aside-block .block-img{
         margin: 0 auto 2rem;
     }
@@ -707,6 +668,7 @@ body{
     transform: translate(-50%,-50%);
 }
 
+
 /* გავსტილოთ svg ელემენტის ტექსტური ინფორმაცია */
 .aside-block .block-info{
     text-align: center;
@@ -720,7 +682,7 @@ body{
     color: #454545;
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .aside-block .block-info strong{
         margin-bottom: 1rem;
     }
@@ -746,35 +708,37 @@ body{
 
 .aside-block .block-info .social-link {
     display: block;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Poppins", sans-serif;
 }
-/* გავსტილოთ მეორე სექცია, რომელიც შეიჩავს შესაყვან ველებს და ფორმას */
+
+
+/********** გავსტილოთ მეორე სექცია, რომელიც შეიჩავს შესაყვან ველებს და ფორმას *******/
 .sec2{
     padding: 6rem 0 7rem;
     background: #fff;
 }
 
 @media(min-width:990px){
-    .sec2 .container{
+    .sec2 .main-container{
         max-width: 1200px;
     }
 }
+
 .sec2 .form-title {
     margin: 0 0 3rem;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 4.6rem;
     color: #27376c;
     font-weight: 600;
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 770px){
     .sec2 {
     padding: 5rem 0 6rem;
     }
 }
 
-
-@media (max-width: 575.98px){
+@media (max-width: 580px){
     .sec2 {
     padding: 3rem 0;
     overflow: hidden;
@@ -790,87 +754,73 @@ body{
 }
 
 .sec2 .form-title:after {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Poppins", sans-serif;
     font-size: 4.8rem;
 }
 
-/* გავსტილოთ ფორმის შესაყვანი ველები */
-.wpcf7 .screen-reader-response {
-    position: absolute;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    width: 1px;
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
 
+/* გავსტილოთ ფორმის შესაყვანი ველები */
 .contact-form {
     display: table;
     width: 100%;
 }
 
-.contact-form .base {
+.contact-form .form-box {
     margin-bottom: 2rem;
 }
 
-@media (max-width: 767.98px)
+@media (max-width: 770px)
 {
-    .contact-form .base {
+    .contact-form .form-box {
     margin-bottom: 1rem;
     }
 }
 
-.row {
+.box-row {
     display: flex;
     flex-wrap: wrap;
     margin-right: -1.5rem;
     margin-left: -1.5rem;
 }
 
-@media (min-width: 576px){
-    .col-sm-4 {
-    flex: 0 0 33.3333333333%;
-    max-width: 33.3333333333%;
+@media (min-width: 580px){
+    .form-col {
+    flex: 0 0 33%;
+    max-width: 33%;
     }
 }
 
-@media (max-width: 767.98px){
-    .contact-form .base .form-column {
+@media (max-width: 770px){
+    .contact-form .form-box .column {
         width: 50%;
     }
 }
 
-@media (max-width: 575.98px){
-    .contact-form .base .form-column {
+@media (max-width: 580px){
+    .contact-form .form-box .column {
     width: 100%;
     }
 }
 
-.contact-form .input-field {
+.contact-form .input-container {
     position: relative;
     margin-bottom: 4rem;
 }
 
-@media (max-width: 575.98px){
-    .contact-form .input-field {
+@media (max-width: 580px){
+    .contact-form .input-container {
     margin-bottom: 3rem;
     }
 }
 
-.wpcf7-form-control-wrap {
-    position: relative;
-}
-
-.col-sm-4{
+.form-col{
     position: relative;
     width: 100%;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
 }
 
-.contact-form .input-field input, .contact-form .input-field textarea {
+.contact-form .input-container input, .contact-form .input-container textarea {
     box-sizing: content-box;
     display: block;
     width: 100%;
@@ -885,12 +835,12 @@ body{
     transition: all .3s;
 }
 
-.contact-form .input-field label {
+.contact-form .input-container label {
     position: absolute;
     top: .8rem;
     left: 0;
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 1;
     color: #454545;
@@ -898,38 +848,38 @@ body{
     transition: .2s ease-out;
 }
 
-@media (max-width: 767.98px){
-    .contact-form .input-field label {
+@media (max-width: 770px){
+    .contact-form .input-container label {
     font-size: 1.8rem;
     }
 }
 
-.contact-form .input-field label span {
+.contact-form .input-container label span {
     color: #ec008c;
 }
 
-@media (min-width: 576px){
+@media (min-width: 580px){
     .col-sm-8 {
-        flex: 0 0 66.6666666667%;
-        max-width: 66.6666666667%;
+        flex: 0 0 66%;
+        max-width: 66%;
     }
 }
 
-
-.contact-form .input-field textarea {
+.contact-form .input-container textarea {
     height: 8.5rem;
     resize: none;
 }
 
-.contact-form .input-field label.active {
+.input-container label.action{
     top: .5rem;
     font-size: 1.5rem;
     transform: translateY(-140%);
 }
 
-.contact-form .input-field input:focus:not([readonly]), .contact-form .input-field textarea:focus:not([readonly]) {
+.contact-form .input-container input:focus, .contact-form .input-container textarea:focus{
     border-bottom: 1px solid #ec008c;
 }
+
 
 /* გავსტილოთ კითხვის ღილაკი */
 .contact-form .more-form {
@@ -937,7 +887,7 @@ body{
     text-align: center;
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 770px){
     .contact-form .more-form {
         margin: 0 0 3rem;
     }
@@ -950,7 +900,7 @@ body{
 }
 
 .contact-form .more-form .more-questions .question {
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     border-bottom: .1rem solid #ec008c;
 }
 
@@ -971,6 +921,8 @@ body{
     border-width: 0 0 .2rem .2rem;
     transform: rotate(-45deg);
 }
+
+
 /* გავსტილოთ დამატებითი ინფუთები, რომლებიც შემოდის ჩვენი გამოძახების შემდგომ */
 .contact-form .additional.active {
     margin-bottom: 2rem;
@@ -979,64 +931,64 @@ body{
     opacity: 1;
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 770px){
     .contact-form .additional.active {
     height: 53.6rem;
     }
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 580px){
     .contact-form .additional.active {
         margin-bottom: 2rem;
     }    
 }
 
-.contact-form .additional.active .additional__fields {
+.contact-form .additional.active .checkbox-fields {
     height: auto;
 }
 
-.contact-form .additional__fields {
+.contact-form .checkbox-fields {
     float: left;
     width: 100%;
 }
 
-.contact-form .additional__fields .summary {
+.contact-form .checkbox-fields .added {
     margin-bottom: 4rem;
 }
 
-.contact-form .additional__fields .summary__timeframe {
+.contact-form .checkbox-fields .timeframe {
     float: left;
     width: 50%;
     padding-right: 1.5rem;
 }
 
-@media (max-width: 767.98px){
-    .contact-form .additional__fields .summary__timeframe {
+@media (max-width: 770px){
+    .contact-form .checkbox-fields .timeframe {
         width: 100%;
         padding-right: 0;
         margin-bottom: 3rem;
     }
 }
 
-.contact-form .additional__fields h4 {
+.contact-form .checkbox-fields h4 {
     margin: 0 0 4.5rem;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 2.4rem;
     color: #27376c;
 }
 
-.contact-form .additional__fields h4 span {
-    font-family: Proxima Nova Regular,sans-serif;
+.contact-form .checkbox-fields h4 span {
+    font-family: "Poppins", sans-serif;
     font-size: 1.7rem;
     font-weight: 400;
     color: #454545;
 }
 
-.contact-form .additional__fields .summary .field {
+.contact-form .checkbox-fields .added .field {
     position: relative;
 }
 
-.sr-only {
+.check-label {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -1048,7 +1000,7 @@ body{
     border: 0;
 }
 
-.contact-form .additional__fields .summary .field input {
+.contact-form .checkbox-fields .added .field input {
     display: block;
     width: 100%;
     padding-bottom: 1.7rem;
@@ -1060,7 +1012,7 @@ body{
     outline: none;
 }
 
-.contact-form .additional__fields .summary__timeframe .field:after {
+.contact-form .checkbox-fields .timeframe .field:after {
     position: absolute;
     right: 0;
     bottom: 2rem;
@@ -1070,13 +1022,13 @@ body{
     background: url(./Assets/calendar-icon.png) no-repeat 50%/cover;
 }
 
-.contact-form .additional__fields .summary__budget {
+.contact-form .checkbox-fields .budget {
     float: left;
     width: 50%;
     padding-left: 1.5rem;
 }
 
-.contact-form .additional__fields .summary__budget .field:after {
+.contact-form .checkbox-fields .budget .field:after {
     position: absolute;
     right: 0;
     bottom: 2rem;
@@ -1086,24 +1038,24 @@ body{
     background: url(./Assets/pound.svg) no-repeat 50%/cover;
 }
 
-.clearfix:after {
+.checkbox-after:after {
     display: block;
     clear: both;
     content: "";
 }
 
 /* გავსტილოთ ჩეკბოქსები */
-.contact-form .additional__fields .types {
+.contact-form .checkbox-fields .checkbox-box {
     overflow: hidden;
 }
 
-@media (max-width: 767.98px){
-    .contact-form .additional__fields .types {
+@media (max-width: 770px){
+    .contact-form .checkbox-fields .checkbox-box {
     margin-bottom: 2rem;
     }
 }
 
-.contact-form .additional__fields .types .wpcf7-list-item {
+.contact-form .checkbox-fields .checkbox-box .checkbox-container {
     position: relative;
     display: block;
     float: left;
@@ -1111,14 +1063,14 @@ body{
     margin: 0 0 3.5rem;
 }
 
-@media (max-width: 767.98px){
-    .contact-form .additional__fields .types .wpcf7-list-item {
+@media (max-width: 770px){
+    .contact-form .checkbox-fields .checkbox-box .checkbox-container {
     width: 50%;
     }
 }
 
-@media (max-width: 575.98px){
-    .contact-form .additional__fields .types .wpcf7-list-item {
+@media (max-width: 580px){
+    .contact-form .checkbox-fields .checkbox-box .checkbox-container {
     float: none;
     width: 100%;
     }
@@ -1141,7 +1093,7 @@ input[type=checkbox], input[type=radio] {
     border: 0;
 }
 
-.contact-form .additional__fields .types .wpcf7-list-item label {
+.contact-form .checkbox-fields .checkbox-box .checkbox-container label {
     position: relative;
     padding-left: 4.8rem;
     margin: 0;
@@ -1151,7 +1103,7 @@ input[type=checkbox], input[type=radio] {
     cursor: pointer;
 }
 
-.contact-form .additional__fields .types .wpcf7-list-item label:before {
+.contact-form .checkbox-fields .checkbox-box .checkbox-container label:before {
     position: absolute;
     left: 0;
     width: 2.8rem;
@@ -1162,12 +1114,12 @@ input[type=checkbox], input[type=radio] {
     transition: all .3s ease-in-out;
 }
 
-.contact-form .additional__fields .types .wpcf7-list-item label span {
+.contact-form .checkbox-fields .checkbox-box .checkbox-container label span {
     position: relative;
     top: .3rem;
 }
 
-.contact-form .additional__fields .types .wpcf7-list-item label:after {
+.contact-form .checkbox-fields .checkbox-box .checkbox-container label:after {
     position: absolute;
     top: .8rem;
     left: .8rem;
@@ -1197,7 +1149,7 @@ input[type=checkbox], input[type=radio] {
     position: relative;
     display: inline-block;
     padding: 1.3rem 2.3rem 1.15rem;
-    font-family:sans-serif;
+    font-family:"Poppins", sans-serif;
     font-size: 1.7rem;
     line-height: 1;
     cursor: pointer;
@@ -1236,27 +1188,13 @@ input[type=checkbox], input[type=radio] {
     color: #fff;
 }
 
-.svg-container:not(.no-color) svg {
+.svg-container:not(.color-none) svg {
     display: inline-block;
     width: inherit;
     height: inherit;
     color: inherit!important;
 }
 
-.wpcf7 form.init .wpcf7-response-output {
-    display: none;
-}
-
-.contact .wpcf7 form .wpcf7-response-output {
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 1.7rem 2.2rem 1.7rem 6rem;
-    margin: 2.5rem 0 0;
-    font-family:sans-serif;
-    font-size: 1.8rem;
-    border-radius: 3rem;
-}
 
 /* გავსტილოთ  ჩვენი გვერდის ბოლო  ნაწილი footer-ი */
 .footer-contact{
@@ -1265,9 +1203,9 @@ input[type=checkbox], input[type=radio] {
     box-shadow: inset 0 0.1rem 0.2rem 0 #dedede;
 }
 
-@media (min-width: 576px)
+@media (min-width: 580px)
 {
-    .col-sm-6 {
+    .half-width {
         flex: 0 0 50%;
         max-width: 50%;
     }
@@ -1281,32 +1219,32 @@ input[type=checkbox], input[type=radio] {
 }
 
 @media (min-width: 1000px){
-    .footer-contact .container{
+    .footer-contact .main-container{
         max-width: 1100px;
     }
 }
 
 /* fotter-ის მარცხენა კაონტეინერის გასტილვა */
-.col-12 {
+.max-width {
     flex: 0 0 100%;
     max-width: 100%;
 }
 
-@media (min-width: 576px){
-    .col-sm-6 {
+@media (min-width: 580px){
+    .half-width {
         flex: 0 0 50%;
         max-width: 50%;
     }
 }
 
-@media (min-width: 992px){
-    .col-lg-8 {
-        flex: 0 0 66.6666666667%;
-        max-width: 66.6666666667%;
+@media (min-width: 990px){
+    .third-width {
+        flex: 0 0 66%;
+        max-width: 66%;
     }
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .company-connection .phone {
         margin-right: 0;
         margin-bottom: .8rem;
@@ -1315,7 +1253,7 @@ input[type=checkbox], input[type=radio] {
 
 .company-name {
     margin-bottom: .6rem;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.8rem;
     color: #797979;
 }
@@ -1329,12 +1267,12 @@ input[type=checkbox], input[type=radio] {
 
 .company-connection .mail, .company-connection .phone {
     display: inline-block;
-    font-family:sans-serif;
+    font-family:"Poppins", sans-serif;
     font-size: 1.7rem;
     transition: all .2s ease-in-out;
 }
 
-@media (max-width: 991.98px){
+@media (max-width: 989px){
     .company-connection .mail, .company-connection .phone {
         display: block;
     }
@@ -1356,6 +1294,7 @@ input[type=checkbox], input[type=radio] {
     vertical-align: middle;
 }
 
+
 /* გავსტილოთ footer-ის მარჯვენა კონტეინერი */
 .social-contact{
     margin-right: 2rem;
@@ -1366,7 +1305,7 @@ input[type=checkbox], input[type=radio] {
     text-align: right;
 }
 
-@media (max-width: 767.98px){
+@media (max-width: 770px){
     .footer-contact .social-contact {
         text-align: left;
     }
@@ -1375,7 +1314,7 @@ input[type=checkbox], input[type=radio] {
 .social-contact .social-text{
     margin-bottom: 4rem;
     padding-bottom: 2rem;
-    font-family:sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.8rem;
     color: #797979;
 }
@@ -1385,8 +1324,8 @@ input[type=checkbox], input[type=radio] {
     margin: 0 .5rem 1rem;
 }
 
-@media (min-width: 992px){
-    .col-lg {
+@media (min-width: 990px){
+    .width-80 {
         flex-basis: 0;
         flex-grow: 1;
         max-width: 80%;
@@ -1413,19 +1352,20 @@ a .fa-behance{
     color: #4176FA;
 }
 
+
 /* გავსტილოთ footer-ის მეორე სექცია ფორმა */
 .footer-form {
     background: linear-gradient(180deg,#f8f8f8 50%,#27376c 0);
 } 
 
 @media (min-width: 1000px){
-    .footer-form .container{
-        max-width: 1100px;
+    .footer-form .main-container{
+        max-width: 1150px;
     }
 }
 
-@media (max-width: 767.98px){
-    .footer-form .container {
+@media (max-width: 770px){
+    .footer-form .main-container {
         padding: 0;
     }
 }
@@ -1457,23 +1397,23 @@ a .fa-behance{
 }
 
 @media (max-width: 768px){
-    .d-none {
+    .display-none {
         display: none!important;
     }
 }
 
 
-.col-lg-4{
+.width-30{
     position: relative;
     width: 100%;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
 }
 
-@media (min-width: 992px){
-    .col-lg-4 {
-        flex: 0 0 33.3333333333%;
-        max-width: 33.3333333333%;
+@media (min-width: 990px){
+    .width-30 {
+        flex: 0 0 33%;
+        max-width: 33%;
     }
 }
 
@@ -1481,35 +1421,35 @@ a .fa-behance{
     text-align: center!important;
 }
 
-.mb-5, .my-5 {
+.mrg-bot-3{
     margin-bottom: 3rem!important;
 }
 
-@media (min-width: 992px){
-    .mb-lg-0, .my-lg-0 {
+@media (min-width: 990px){
+    .mrg-bot-0 {
         margin-bottom: 0!important;
     }
 }
 
 
 @media (min-width: 768px){
-    .text-md-left {
+    .text-aligen-left {
     text-align: left!important;
     }
 }
 
-.mb-2, .my-2 {
+.marg-bot {
     margin-bottom: .5rem!important;
 }
 
 @media (min-width: 768px){
-    .d-md-none {
+    .display-none-important {
         display: none!important;
     }
 }
 
 
-.footer-form .headline {
+.footer-form .footer-form-line {
     margin-bottom: 1rem;
     font-size: 2.7rem;
     font-weight: 400;
@@ -1517,12 +1457,12 @@ a .fa-behance{
 }  
 
 @media (min-width: 768px){
-    .footer-form .headline {
+    .footer-form .footer-form-line {
         font-size: 3.3rem;
     }
 }
 
-.headline:after {
+.footer-form-line:after {
     font-size: 6rem;
     font-weight: 400;
     line-height: 0;
@@ -1531,9 +1471,10 @@ a .fa-behance{
 }
 
 .footer-form .content p {
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     line-height: 1.6;
 }
+
 
 /* გავსტილოთ  footer-ის ფორმის ველები და ღილაკი */
 .foot-form-con{
@@ -1543,16 +1484,16 @@ a .fa-behance{
     padding-left: 1.5rem;
 }
 
-@media (min-width: 992px){
+@media (min-width: 990px){
     .foot-form-con-1 {
     padding-left: 3rem!important;
     }
 }
 
-@media (min-width: 992px){
+@media (min-width: 990px){
     .foot-form-con {
-        flex: 0 0 66.6666666667%;
-        max-width: 66.6666666667%;
+        flex: 0 0 66%;
+        max-width: 66%;
     }
 }
 
@@ -1560,26 +1501,26 @@ a .fa-behance{
     align-self: flex-end!important;
 }
 
-@media (min-width: 576px){
-    .col-sm-6 {
+@media (min-width: 580px){
+    .half-width {
         flex: 0 0 50%;
         max-width: 50%;
     }
 }
 
-.footer-form .input-field {
+.footer-form .input-container {
     position: relative;
     margin-bottom: 4rem;
 }
 
-@media (min-width: 576px){
-    .footer-form  .input-field {
+@media (min-width: 580px){
+    .footer-form  .input-container {
         margin-bottom: 2rem;
     }
 }
 
 
-.footer-form .input-field input{
+.footer-form .input-container input{
     box-sizing: content-box;
     display: block;
     width: 100%;
@@ -1595,7 +1536,7 @@ a .fa-behance{
 }
 
 
-.footer-form .input-field label {
+.footer-form .input-container label {
     position: absolute;
     top: .8rem;
     left: 0;
@@ -1609,71 +1550,69 @@ a .fa-behance{
     transition: .2s ease-out;
 }
 
-.footer-form .input-field input {
+.footer-form .input-container input {
     font-size: 1.7rem;
 }
 
-.footer-form .input-field label:not(.active) {
-    padding-bottom: .9rem;
-    font-size: 1.7rem;
-}
 
-@media (max-width: 767.98px){
-    .footer-form .input-field label {
+@media (max-width: 770px){
+    .footer-form .input-container label {
     font-size: 1.8rem;
     }
 }
 
-.footer-form .input-field label span {
+.footer-form .input-container label span {
     color: #ec008c;
     font-size: x-small;
 }
 
-/*ღილაკის გასტილვა*/
-.col-lg-3{
+
+/*ღილაკის გასტილვა*/ 
+.width-25{
     position: relative;
     width: 100%;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
 }
 
-@media (min-width: 992px){
-    .col-lg-3 {
+@media (min-width: 990px){
+    .width-25 {
         flex: 0 0 25%;
         max-width: 25%;
     }
 }
 
-@media (min-width: 992px){
+@media (min-width: 990px){
     .text-lg-left {
         text-align: left!important;
     }
 }
 
 
-@media (max-width: 767.98px){
+@media (max-width: 770px){
     .footer-form .button {
     display: block;
     width: 100%;
     }
 }
 
-.svg-container:not(.no-color) svg [fill*="#"]:not(.noColor){
+.svg-container:not(.color-none) svg [fill*="#"]:not(.noColor){
     fill: currentColor!important;
     transition: fill .5s ease;
 }
 
-.footer-form .legal {
+.footer-form .privacy {
     margin-top: 1.5rem;
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
     color: #454545;
 }
 
-.footer-form .legal a {
-    font-family: sans-serif;
+.footer-form .privacy a {
+    font-family: "Poppins", sans-serif;
     text-decoration: underline;
 }
+
 
 /* გავსტილოთ footer-ის მესამე სექცია */
 .footer-privacy{
@@ -1681,32 +1620,34 @@ a .fa-behance{
     background: #27376c;
 }
 
-.last-footer{
-
+@media (min-width: 990px){
+    .footer-privacy .main-container {
+        max-width: 1150px;
+    }
 }
 
-.col-12, .col-sm-6, .col-lg-8{
+.max-width, .half-width, .third-width{
     position: relative;
     width: 100%;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
 }
 
-@media (min-width: 992px){
-    .col-lg-8 {
-    flex: 0 0 66.6666666667%;
-    max-width: 66.6666666667%;
+@media (min-width: 990px){
+    .third-width {
+    flex: 0 0 66%;
+    max-width: 66%;
     }
 }
 
-@media (min-width: 576px){
-    .col-sm-6 {
+@media (min-width: 580px){
+    .half-width {
         flex: 0 0 50%;
         max-width: 50%;
     }
 }
 
-.footer__rights__copy p {
+.footer-rights-copy p {
     font-size: 1.7rem;
     line-height: 1.471;
     color: #7d8bbc;
@@ -1714,30 +1655,30 @@ a .fa-behance{
 
 @media (min-width: 768px)
 {
-    .d-md-none {
+    .display-none-important {
     display: none!important;
     }
 }
 
-.footer__rights__copy ul {
+.footer-rights-copy ul {
     padding: 0;
     margin: 1.5rem 0;
     font-size: 0;
 }
 
-.footer__rights__copy ul li {
+.footer-rights-copy ul li {
     position: relative;
     display: inline-block;
     list-style: none;
 }
 
-.footer__rights__copy ul li a {
+.footer-rights-copy ul li a {
     padding-right: 1.3rem;
     font-size: 1.4rem;
     color: #7d8bbc;
 }
 
-.footer__rights__copy ul li:not(:first-child):before {
+.footer-rights-copy ul li:not(:first-child):before {
     position: absolute;
     top: 50%;
     left: -5px;
@@ -1750,25 +1691,25 @@ a .fa-behance{
     transform: translate(-50%,-50%);
 }
 
-.footer__rights__copy ul li a:hover {
+.footer-rights-copy ul li a:hover {
     color: #f24aad;
 }
 
 
-@media (min-width: 992px){
-    .col-lg {
+@media (min-width: 990px){
+    .width-80 {
         flex-basis: 0;
         flex-grow: 1;
         max-width: 100%;
     }
 }
 
-.footer__back {
+.footer-back {
     overflow: hidden;
 }
 
-@media (min-width: 576px){
-    .text-sm-right {
+@media (min-width: 580px){
+    .text-sashualo-right {
     text-align: right!important;
     }
 }
@@ -1782,7 +1723,7 @@ a .fa-behance{
     background-color: #626985;
 }
 
-.svg-container:not(.no-color) svg [fill*="#headerID"]:not(.noColor) {
+.svg-container:not(.color-none) svg [fill*="#headerID"]:not(.noColor) {
     fill: currentColor!important;
     transition: fill .5s ease;
 }

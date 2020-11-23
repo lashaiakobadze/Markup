@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="input.css">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7d85f262cb.js" crossorigin="anonymous"></script>
-        
         <title>Contact - Radical Web Design</title>
-        <link rel="javascript" href="JS.js">
-        <script src="./JS.js" defer></script>
-        <script src="./console.js" defer></script>
-       <!-- <script src="./inputer.js" defer></script>  -->
+   <!--<script src="./console.js" defer></script>-->
+       <script src="./JS.js" defer></script>  
+       <script src="./input.js"></script>
     </head>
     <body>
 <!-- header-ი, ჩვენი გვერდის უმთავრესი და საწყისი ნაწილი -->
         <header id="headerID" class="header">
             <nav class="navigation">
                 <div class="main-logo">
-                    <a href="https://radicalwebdesign.co.uk" title="Go to the homepage" class="logo">
-                        <span class="logo-vector svg-container no-color">
+                    <a href="https://radicalwebdesign.co.uk" title="Homepage" class="logo">
+                        <span class="logo-size svg-container color-none">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20rem" height="6rem" viewBox="0 0 413.819 124.215">
                                 <defs><path id="a" d="M26.422 11.292C10.451 22.53 0 41.09 0 62.106c0 34.298 27.806 62.108 62.101 62.108 15.002 0 28.766-5.326 39.494-14.182 13.807-11.395 22.609-28.636 22.609-47.927C124.204 27.806 96.402 0 62.101 0a61.782 61.782 0 0 0-35.679 11.292"></path></defs>
                                 <clipPath id="b">
@@ -83,19 +80,19 @@
 
                 <nav class="header-nav">
                     <ul class="nav-list">
-                        <li active=""><a id="Home" title="Home" href="https://radicalwebdesign.co.uk/">Home</a></li>
-                        <li active=""><a id="About" title="About" href="https://radicalwebdesign.co.uk/about/">About</a></li>
-                        <li active=""><a id="Oure-Process" title="Oure Process" href="https://radicalwebdesign.co.uk/our-process/">Process</a></li>
-                        <li active=""><a id="Services" title="Services" href="https://radicalwebdesign.co.uk/services/">Services</a></li>
-                        <li active=""><a id="Worck" title="Worck" href="https://radicalwebdesign.co.uk/work/">Worck</a></li>
-                        <li active=""><a id="Blog" title="Blog" href="https://radicalwebdesign.co.uk/blog/">Blog</a></li>
-                        <li active=""><a id="Contact" title="Contact" href="https://radicalwebdesign.co.uk/contact/">Contact</a></li>
+                        <li><a id="Home" title="Home" href="https://radicalwebdesign.co.uk/">Home</a></li>
+                        <li><a id="About" title="About" href="https://radicalwebdesign.co.uk/about/">About</a></li>
+                        <li><a id="Oure-Process" title="Oure Process" href="https://radicalwebdesign.co.uk/our-process/">Process</a></li>
+                        <li><a id="Services" title="Services" href="https://radicalwebdesign.co.uk/services/">Services</a></li>
+                        <li><a id="Worck" title="Worck" href="https://radicalwebdesign.co.uk/work/">Worck</a></li>
+                        <li><a id="Blog" title="Blog" href="https://radicalwebdesign.co.uk/blog/">Blog</a></li>
+                        <li><a id="Contact" title="Contact" href="https://radicalwebdesign.co.uk/contact/">Contact</a></li>
                     </ul>
                 </nav>
             </nav>
 
             <div class="header-bottom">
-                <div class="container">
+                <div class="main-container">
                     <aside class="bottom-left">
                         <h1 class="bottom-left-h1">Contact</h1>
                         <div class="bottom-nav">
@@ -116,9 +113,9 @@
                 </div>
             </div>
         </header>
-<!-- სექცია (sec1)-ი, რომელიც მოიცავს კომპანისს მთავარ საკონტაქტო ინფორმაციას -->
+<!-- სექცია sec1-ი, რომელიც მოიცავს კომპანისს მთავარ საკონტაქტო ინფორმაციას -->
         <section class="sec1">
-            <div class="container">
+            <div class="main-container">
                 <div class="asides-box">
                     <aside class="aside">
                         <div class="aside-block">
@@ -274,7 +271,7 @@
                                 </div>
                             </div>  
                             <div class="block-info">
-                                <strong><a href="tel:+441618186861">+44 (0) 161 818 6861</a></strong>
+                                <strong><a href="">+44 (0) 161 818 6861</a></strong>
                                 <p>Monday - Friday<br>
                                     8:00am - 4:00pm</p>
                             </div> 
@@ -302,7 +299,7 @@
                                 </div>
                             </div>
                             <div class="block-info">
-                                <strong><a href="mailto:hello@radical.agency">hello@radical.agency</a></strong>
+                                <strong><a href="">hello@radical.agency</a></strong>
                                 <p>E-mail us directly or use<br>
                                     the enquiry form below.</p>
                             </div>
@@ -312,75 +309,63 @@
             </div>
         </section>
 <!-- სექცია (sec2)-ი, რომელშიც განთავსებულია ფორმა და ველები -->
-        <section class="sec2 animate-it animated fadeIn">
-            <div class="container">
+        <section class="sec2">
+            <div class="main-container">
                 <h1 class="form-title">Let’s get started</h1>
-                <div role="form" class="wpcf7" id="wpcf7-f290-o1" lang="en-GB" dir="ltr">
-                    <div class="screen-reader-response">
-                        <p role="status" aria-live="polite" aria-atomic="true"></p>
-                         <ul></ul>
-                    </div>
-
-                    <form action="/contact/#wpcf7-f290-o1" method="post" class="wpcf7-form init form contact-form mailchimp-ext-0.5.28" novalidate="novalidate" data-status="init">
-                        <div class="base">
-                            <div class="row">
-
-                                <div class="form-column col-sm-4">
-                                    <div class="input-field required-field">
-                                        <span class="wpcf7-form-control-wrap your-name">
-                                            <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input name-input validate" id="your-name" aria-required="true" aria-invalid="false">
-                                        </span><br>
-                                        <label for="your-name">Your name <span>*</span></label>
+                <div>                    
+                    <form action="index.html" method="post" class="contact-form" novalidate="novalidate" data-status="init" autocomplete="off">
+                        <div class="form-box">
+                            <div class="box-row">
+                                <div class="column form-col">
+                                    <div class="input-container required-field">
+                                        <input type="text" name="your-name" value="" size="40" class="input" id="your-name" aria-required="true" aria-invalid="false">
+                                        <br>
+                                        <label for="your-name" class="action">Your name<span>*</span></label>   
+                                    </div>
+                                    <p></p>
+                                  </div>
+                                
+                                <div class="column form-col">
+                                    <div class="input-container required-field">
+                                        <input type="email" name="your-email" value="" size="40" class="input" id="email" aria-required="true" aria-invalid="false">
+                                        <br>
+                                        <label for="email" class="action">E-mail address <span>*</span></label>
                                     </div>
                                     <p></p>
                                 </div>
-
-                                <div class="form-column col-sm-4 ">
-                                    <div class="input-field required-field">
-                                        <span class="wpcf7-form-control-wrap your-email">
-                                            <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-input email-input validate" id="email" aria-required="true" aria-invalid="false">
-                                        </span><br>
-                                        <label for="email">E-mail address <span>*</span></label>
+                                
+                                <div class="column form-col">
+                                    <div class="input-container required-field">
+                                        <input type="tel" name="your-number" value="" size="40" class="input" id="phone-number" aria-required="true" aria-invalid="false">
+                                        <br>
+                                        <label for="phone-number" class="action">Phone number <span>*</span></label>
                                     </div>
                                     <p></p>
                                 </div>
-
-                                <div class="form-column col-sm-4">
-                                    <div class="input-field required-field">
-                                        <span class="wpcf7-form-control-wrap your-number">
-                                            <input type="tel" name="your-number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-input number-input validate" id="phone-number" aria-required="true" aria-invalid="false">
-                                        </span><br>
-                                        <label for="phone-number">Phone number <span>*</span></label>
+                                
+                                <div class="column form-col">
+                                    <div class="input-container">
+                                        <input type="text" name="your-company" value="" size="40" class="input" id="your-company" aria-invalid="false">
+                                        <br>
+                                        <label for="your-company" class="action">Company/Organization</label>
                                     </div>
                                     <p></p>
                                 </div>
-
-                                <div class="form-column col-sm-4">
-                                    <div class="input-field">
-                                        <span class="wpcf7-form-control-wrap your-company">
-                                            <input type="text" name="your-company" value="" size="40" class="wpcf7-form-control wpcf7-text validate" id="your-company" aria-invalid="false">
-                                        </span><br>
-                                        <label for="your-company">Company/Organization</label>
-                                    </div>
-                                    <p></p>
-                                </div>
-
+                                
                                 <div class="col-sm-8">
-                                    <div class="input-field">
-                                        <span class="wpcf7-form-control-wrap your-website">
-                                            <input type="url" name="your-website" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-url wpcf7-validates-as-url validate" id="your-website" aria-invalid="false">
-                                        </span><br>
-                                            <label for="your-website">Current website URL</label>
+                                    <div class="input-container">
+                                        <input type="url" name="your-website" value="" size="40" class="input" id="your-website" aria-invalid="false">
+                                        <br>
+                                        <label for="your-website" class="action">Current website URL</label>
                                     </div>
                                     <p></p>
                                 </div>
-
-                                <div class="col-12">
-                                    <div class="input-field required-field">
-                                        <span class="wpcf7-form-control-wrap your-message">
-                                            <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required validate" id="about-project" aria-required="true" aria-invalid="false"></textarea>
-                                        </span><br>
-                                        <label for="about-project">How can we help? <span>*</span></label>
+                                
+                                <div class="max-width">
+                                    <div class="input-container required-field">
+                                        <textarea name="your-message" cols="40" rows="10" class="input" id="about-project" aria-required="true" aria-invalid="false"></textarea>
+                                        <br>
+                                        <label for="about-project" class="action">How can we help? <span>*</span></label>
                                     </div>
                                     <p></p>
                                 </div>
@@ -391,11 +376,12 @@
                         <div id='add' class="more-form">
                             <a role="button" href="#demo" class="more-questions">
                                 <strong class="question">Do you have time for three more questions?</strong>
-                                <span class="optional">(optional)</span></a>
+                                <span class="optional">(optional)</span>
+                            </a>
                         </div>
 
                         <!-- დამატებითი ინფუთის შემოტანა JS.js ფაილიდან-->
-                        <div id="demo" class="additional clearfix"> 
+                        <div id="demo" class="additional checkbox-after"> 
                         </div>
 
                         <div class="submit-field">
@@ -406,8 +392,7 @@
                                     </svg>
                                 </span>
                             </button>
-                        </div> 
-
+                        </div>
                     </form>
                 </div>
             </div>
@@ -415,13 +400,13 @@
 <!-- footer-ი, რომელიც მოიცავს მცირეს ფორმასაც -->
         <footer class="footer">
             <section class="footer-contact">
-                <div class="container">
-                    <div class="row">
-                        <aside class="col-12 col-sm-6 col-lg-8">
+                <div class="main-container">
+                    <div class="box-row">
+                        <aside class="max-width half-width third-width">
                             <strong class="company-name">Radical Web Design</strong>
                             <address class="company-address">The Sharp Project, Thorp Road, Manchester, M40 5BJ.</address>
                             <div class="company-connection">
-                                <a href="tel:+441618186861" class="phone">
+                                <a href="#" class="phone">
                                     <span class="icon svg-container" aria-hidden="true">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <path fill="#ec008c" d="M19 2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V2zm-8.5 0h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1zM12 22a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm5-3H7V4.976h10V19z"></path>
@@ -429,8 +414,7 @@
                                     </span>
                                     <strong class="meta">+44 (0) 161 818 6861</strong>
                                 </a>
-
-                                <a href="mailto:hello@radical.agency" class="mail">
+                                <a href="#" class="mail">
                                     <span class="icon svg-container" aria-hidden="true">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <path fill="#ec008c" d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.104 10-8.104V19H2z"></path>
@@ -441,7 +425,7 @@
                             </div>
                         </aside>
 
-                        <aside class="col-12 col-sm-6 col-lg-8 col-lg">
+                        <aside class="max-width half-width third-width width-80">
                             <div class="social-contact">
                                 <strong class="social-text">Follow us on social media</strong>
                                 <ul class="social-icons">
@@ -459,52 +443,45 @@
 
             <section class="footer-form">
                 <div>
-                    <div class="container">
+                    <div class="main-container">
                         <div class="box">
-                            <img src="./Assets/newsletter-icon.svg" class="icon d-none d-md-block">
-                            <div class="row">
-                                <div class="col-lg-4 mb-5 mb-lg-0 text-center text-md-left">
-                                    <img src="https://radicalwebdesign.co.uk/wp-content/themes/radicalwebdesign/assets/images/vectors/newsletter-icon.svg" class="icon mb-2 d-md-none">
-                                    <p class="radical-heading headline">Let's stay <b>in touch</b></p>
+                            <img src="./Assets/newsletter-icon.svg" class="icon display-none">
+                            <div class="box-row">
+                                <div class="width-30 mrg-bot-3 mrg-bot-0 text-center text-aligen-left">
+                                    <img src="https://radicalwebdesign.co.uk/wp-content/themes/radicalwebdesign/assets/images/vectors/newsletter-icon.svg" class="icon marg-bot display-none-important">
+                                    <p class="footer-form-line">Let's stay <b>in touch</b></p>
                                     <div class="content">
                                         <p><b>Subscribe to our newsletter</b> and don’t miss out on latest news, blog posts and special offers.</p>
                                     </div>
                                 </div>
 
                                 <div class="foot-form-con foot-form-con-1">
-                                    <div role="form" class="wpcf7" id="wpcf7-f2568-o2" lang="en-GB" dir="ltr">
-                                        <div class="screen-reader-response">
-                                            <p role="status" aria-live="polite" aria-atomic="true"></p>
-                                        </div>
-                                        <form action="/contact/#wpcf7-f2568-o2" method="post" class="wpcf7-form init mailchimp-ext-0.5.28" novalidate="novalidate" data-status="init">
-                                            <div style="display: none;">
-                                                <input type="hidden" name="_wpcf7" value="2568">
-                                                <input type="hidden" name="_wpcf7_version" value="5.3">
-                                                <input type="hidden" name="_wpcf7_locale" value="en_GB">
-                                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f2568-o2">
-                                                <input type="hidden" name="_wpcf7_container_post" value="0">
-                                                <input type="hidden" name="_wpcf7_posted_data_hash" value="">
-                                            </div>
-                                                <div class="row">
-                                                    <div class="col-sm-6 col-lg-4 align-self-end">
-                                                        <div class="input-field required-field">
-                                                            <span class="wpcf7-form-control-wrap your-name">
-                                                                <input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input name-input validate" aria-required="true" aria-invalid="false">
+                                    <div>
+                                        <form action="index.html" method="post" class="" novalidate="novalidate">
+                                                <div class="box-row">
+                                                    <div class="half-width width-30 align-self-end">
+                                                        <div class="input-container required-field">
+                                                            <span class="your-name">
+                                                                <input type="text" name="your-name" value="" size="40" class="validate" aria-required="true" aria-invalid="false">
                                                             </span>
                                                             <br>
                                                             <label for="your-name">Your name <span>*</span></label>
+                                                            
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-6 col-lg-4 align-self-end">
-                                                        <div class="input-field required-field">
-                                                            <span class="wpcf7-form-control-wrap your-email">
-                                                                <input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-input name-input validate" aria-required="true" aria-invalid="false">
+                                                    
+                                                    <div class="half-width width-30 align-self-end">
+                                                        <div class="input-container  required-field">
+                                                            <span class="your-email">
+                                                                <input type="email" name="your-email" value="" size="40" class="validate" aria-required="true" aria-invalid="false">
                                                             </span>
                                                             <br>
-                                                            <label for="your-email">E-mail address <span>*</span></label>
+                                                            <label for="your-email ">E-mail address <span>*</span></label>
+                                                            
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-lg-3 text-center text-lg-left">
+
+                                                    <div class="max-width width-25 text-center text-lg-left">
                                                         <button type="submit" class="button right-arrow pink-button">
                                                             <strong>Subscribe</strong>
                                                             <span class="arrow svg-container">
@@ -515,37 +492,37 @@
                                                             </span>
                                                         </button>
                                                     </div>
+
                                                 </div>
-                                                <p class="legal">Check our <a href="" target="_blank">Privacy Policy</a>
+                                                <p class="privacy">Check our <a href="" target="_blank">Privacy Policy</a>
                                                      to learn how do we store and use your personal details. You can unsubscribe anytime.
                                                 </p>
-                                                <div class="wpcf7-response-output" aria-hidden="true"></div>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+            </section> 
 
             <section class="footer-privacy">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 .col-sm-6 col-lg-8">
-                            <div class="footer__rights__copy">
-                                <p x-ms-format-detection="none">© Copyright 2019 - Radical Web Design Ltd.</p>
-                                <p x-ms-format-detection="none">Company Registration No: 9579364. <br class="d-block d-md-none">VAT Registration No: 213515446</p>
+                <div class="main-container">
+                    <div class="box-row">
+                        <div class="max-width half-width third-width">
+                            <div class="footer-rights-copy">
+                                <p>© Copyright 2019 - Radical Web Design Ltd.</p>
+                                <p>Company Registration No: 9579364. <br class="display-none-important">VAT Registration No: 213515446</p>
                                 <ul id="menu-footer" class="menu">
-                                    <li id="menu-item-1018" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1018"><a href="https://radicalwebdesign.co.uk/sitemap/">Sitemap</a></li>
-                                    <li id="menu-item-1017" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-1017"><a href="https://radicalwebdesign.co.uk/privacy-policy/">Privacy Policy</a></li>
-                                    <li id="menu-item-1167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1167"><a href="https://radicalwebdesign.co.uk/cookie-policy/">Cookie Policy</a></li>
+                                    <li><a href="">Sitemap</a></li>
+                                    <li><a href="">Privacy Policy</a></li>
+                                    <li><a href="">Cookie Policy</a></li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-6 col-lg">
-                            <div class="footer__back text-sm-right"><a href="#headerID">
+                        <div class="max-width half-width width-80">
+                            <div class="footer-back text-sashualo-right"><a href="#headerID">
                                 <button  id="back-to-top" class="back-to-top button right-arrow blue-button" data-speed="500">
                                     <span>Top</span>
                                     <span class="svg-container icon">
@@ -560,26 +537,6 @@
                 </div>
             </section>
         </footer>
-
-        <div class="items">
-            <input type="text" name="" id="keywordSearch1" placeholder="">
-            <button type="submit" class="button right-arrow pink-button"><strong>Submit</strong>
-                <span class="arrow svg-container"><br>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 40">
-                        <path fill="#fff" d="M51.6 21.5c0-.1.1-.2.1-.3 0-.1.1-.2.1-.3 0-.1.1-.2.1-.3v-1.2c0-.1-.1-.2-.1-.3 0-.1 0-.2-.1-.3 0-.1-.1-.2-.1-.3 0-.1-.1-.2-.1-.3-.1-.1-.1-.2-.2-.2l-.2-.2L34.6.9C33.4-.3 31.5-.3 30.4.8 29.2 2 29.2 3.9 30.3 5l11.5 12H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h39L30.3 34.9c-1.2 1.2-1.1 3.1 0 4.2.6.6 1.3.9 2.1.9s1.6-.3 2.1-.9L51 22.2l.2-.2c.1-.1.1-.2.2-.2.2-.1.2-.2.2-.3z"></path>
-                    </svg>
-                </span>
-            </button>
-          </div>
-          <div class="items">
-            <input type="text" name="" id="keywordSearch2" placeholder="">
-            <button>button2</button>
-          </div>
-          <div class="items">
-            <input type="text" name="" id="keywordSearch3" placeholder="">
-            <button>button3</button>
-          </div>
-
     </body>
 </html>
 
