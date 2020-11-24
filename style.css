@@ -1566,6 +1566,11 @@ a .fa-behance{
     font-size: x-small;
 }
 
+.input-container label.action{
+    top: .5rem;
+    font-size: 1.5rem;
+    transform: translateY(-140%);
+}
 
 /*ღილაკის გასტილვა*/ 
 .width-25{
@@ -1728,41 +1733,10 @@ a .fa-behance{
     transition: fill .5s ease;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
+form .input-container p{
+    display: block;
+    margin-top: -1rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #e33a3a;
+}
