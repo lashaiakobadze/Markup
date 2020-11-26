@@ -1,4 +1,4 @@
-/* დავბეჭდოთ კონსოლში ინფუთები */
+/* დავბეჭდოთ კონსოლში ინფუთები 
 
 function onClick(elem) {
     var parent = elem.parentNode;
@@ -23,5 +23,5 @@ function onClick(elem) {
       onClick(this);
     })
   }
-
+*/
  

@@ -235,6 +235,33 @@ body{
     }
 }
 
+.header-nav .nav-list li:not(:last-child):hover{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border:.3rem solid #ec008c;    
+    border-radius:45%;
+    -moz-border-radius:45%;
+    -webkit-border-radius:45%;
+    -webkit-font-smoothing:antialiased;
+    border-left: 0;
+    border-right: 0;
+    transition-duration: 0.2s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.header-nav .nav-list li [title=Contact]{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border:.3rem solid #ec008c;    
+    border-radius:45%;
+    -moz-border-radius:45%;
+    -webkit-border-radius:45%;
+    -webkit-font-smoothing:antialiased;
+    border-left: 0;
+    border-right: 0;
+    transition-delay: 10s;
+}
 
 /* გავსტილოთ ჰედერის ქვედა მხარე */
 .header .header-bottom{
@@ -713,6 +740,14 @@ body{
 
 
 /********** გავსტილოთ მეორე სექცია, რომელიც შეიჩავს შესაყვან ველებს და ფორმას *******/
+/*
+.contact-form{
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+*/
 .sec2{
     padding: 6rem 0 7rem;
     background: #fff;
@@ -870,7 +905,7 @@ body{
     resize: none;
 }
 
-.input-container label.action{
+.input-container.focus label{
     top: .5rem;
     font-size: 1.5rem;
     transform: translateY(-140%);
@@ -922,9 +957,19 @@ body{
     transform: rotate(-45deg);
 }
 
+.add-more-forme{
+    display: none;
+}
 
 /* გავსტილოთ დამატებითი ინფუთები, რომლებიც შემოდის ჩვენი გამოძახების შემდგომ */
-.contact-form .additional.active {
+.contact-form .add-form {
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.contact-form .add-form.active {
     margin-bottom: 2rem;
     overflow: visible;
     visibility: visible;
@@ -932,24 +977,25 @@ body{
 }
 
 @media (max-width: 770px){
-    .contact-form .additional.active {
+    .contact-form .add-form.active {
     height: 53.6rem;
     }
 }
 
 @media (max-width: 580px){
-    .contact-form .additional.active {
+    .contact-form .add-form.active {
         margin-bottom: 2rem;
     }    
 }
 
-.contact-form .additional.active .checkbox-fields {
+.contact-form .add-form.active .checkbox-fields {
     height: auto;
 }
 
 .contact-form .checkbox-fields {
     float: left;
     width: 100%;
+    height: 0;
 }
 
 .contact-form .checkbox-fields .added {
@@ -971,7 +1017,7 @@ body{
 }
 
 .contact-form .checkbox-fields h4 {
-    margin: 0 0 4.5rem;
+    margin: 0 0 4.5rem 0;
     font-family: "Poppins", sans-serif;
     font-size: 2.4rem;
     color: #27376c;
@@ -986,6 +1032,7 @@ body{
 
 .contact-form .checkbox-fields .added .field {
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .check-label {
@@ -1038,7 +1085,7 @@ body{
     background: url(./Assets/pound.svg) no-repeat 50%/cover;
 }
 
-.checkbox-after:after {
+.rem-form:after {
     display: block;
     clear: both;
     content: "";
@@ -1132,6 +1179,27 @@ input[type=checkbox], input[type=radio] {
     transform: scale(0);
 }
 
+.contact-form .checkbox-fields .checkbox-box .checkbox-container input:checked+label:before {
+    border: .1rem solid #ec008c;
+}
+
+label:after {
+    position: absolute;
+    top: .8rem;
+    left: .8rem;
+    width: 1.3rem;
+    height: 1.2rem;
+    content: "";
+    background: url(./Assets/check.svg) no-repeat 50%/cover;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    transform: scale(0);
+}
+
+.contact-form .checkbox-fields .checkbox-box .checkbox-container input:checked+label:after {
+    opacity: 1;
+    transform: scale(1);
+}
 /* გავსტილოთ ღილაკები */
 .contact-form .submit-field {
     float: left;
@@ -1566,10 +1634,14 @@ a .fa-behance{
     font-size: x-small;
 }
 
-.input-container label.action{
+.input-container.focus label{
     top: .5rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transform: translateY(-140%);
+}
+
+.footer-form .input-container input:focus{
+    border-bottom: 1px solid #ec008c;
 }
 
 /*ღილაკის გასტილვა*/ 

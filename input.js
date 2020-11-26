@@ -1,4 +1,4 @@
-/* ინფუთის გასტილვის ფუნქციონალი */
+/* ინფუთის გასტილვის ფუნქციონალი
 const inputs=document.querySelectorAll(".input");
 
 function focusFunc(){
@@ -9,6 +9,6 @@ function focusFunc(){
 inputs.forEach((input) =>{
     input.addEventListener("focus", focusFunc);
 });
-
+ */
 
 

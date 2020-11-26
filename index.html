@@ -317,76 +317,138 @@
                             <div class="box-row">
 
                             <div class="column form-col">                                   
-                                    <div class="input-container required-field">
+                                    <div class="input-container inp-cont">
                                         <input type="text" name="your-name" value="" size="40" class="input" id="your-name">
                                         <br>
-                                        <label for="your-name" class="action" id="nameLabel" class="">Your name<span>*</span></label>  
+                                        <label for="your-name" class="" id="nameLabel" class="lab">Your name<span>*</span></label>  
                                         <p id="name-reqired"></p>
                                     </div>                                                                        
                                   </div>
 
                                 <div class="column form-col">
-                                    <div class="input-container required-field">                           
+                                    <div class="input-container inp-cont">                           
                                         <input type="email" name="your-email" value="" size="40" class="input" id="email">
                                         <br>
-                                        <label for="email" class="action" id="emailLabel">E-mail address <span>*</span></label>
+                                        <label for="email" class="" id="emailLabel">E-mail address <span>*</span></label>
                                         <p id="email-reqired"></p>
                                     </div>
                                     <p></p>
                                 </div>
                                 
                                 <div class="column form-col">
-                                    <div class="input-container required-field">
+                                    <div class="input-container inp-cont">
                                         <input type="tel" name="your-number" value="" size="40" class="input" id="phone-number">
                                         <br>
-                                        <label for="phone-number" class="action">Phone number <span>*</span></label>
+                                        <label for="phone-number" class="">Phone number <span>*</span></label>
                                         <p id="phone-reqired"></p>
                                     </div>
                                     <p></p>
                                 </div>
                                 
                                 <div class="column form-col">
-                                    <div class="input-container">
+                                    <div class="input-container inp-cont">
                                         <input type="text" name="your-company" value="" size="40" class="input" id="your-company">
                                         <br>
-                                        <label for="your-company" class="action">Company/Organization</label>
+                                        <label for="your-company" class="">Company/Organization</label>
                                         <p id="company-reqired"></p>
                                     </div>
                                     <p></p>
                                 </div>
                                 
                                 <div class="width-66"> 
-                                    <div class="input-container">
+                                    <div class="input-container inp-cont">
                                         <input type="url" name="your-website" value="" size="40" class="input" id="your-website">
                                         <br>
-                                        <label for="your-website" class="action">Current website URL</label>
+                                        <label for="your-website" class="">Current website URL</label>
                                         <p id="website-reqired"></p>
                                     </div>
                                     <p></p>
                                 </div>
                                 
                                 <div class="max-width">
-                                    <div class="input-container required-field">
+                                    <div class="input-container inp-cont">
                                         <textarea name="your-message" cols="40" rows="10" class="input" id="about-project"></textarea>
                                         <br>
-                                        <label for="about-project" class="action">How can we help? <span>*</span></label>
+                                        <label for="about-project" class="">How can we help? <span>*</span></label>
                                         <p id="project-reqired"></p>
                                     </div>
                                     <p></p>
                                 </div>
                                 <p></p>
                             </div>
-                        </div>
+                        </div>  
 
                         <div id='add' class="more-form">
-                            <a role="button" href="#demo" class="more-questions">
+                            <a role="button" onclick="add_class_more_form()" href="#add" class="more-questions">
                                 <strong class="question">Do you have time for three more questions?</strong>
                                 <span class="optional">(optional)</span>
                             </a>
-                        </div>
+                        </div>                        
 
-                        <!-- დამატებითი ინფუთის შემოტანა JS.js ფაილიდან-->
-                        <div id="demo" class="additional checkbox-after"> 
+                        <div id="added" class="add-form rem-form"> 
+                            <div class="checkbox-fields">
+                                <div class="added checkbox-after">
+                                    <div class="timeframe">
+                                        <h4>Timeframe <span>(approximate)</span></h4>
+                                        <div class="field"> 
+                                           <label for="launchDate" class="check-label">Tell us about your timescale or deadline</label>
+                                           <br>
+                                            <input type="text" name="launch-date" value="" size="40" class="input" id="launchDate">                    
+                                        </div>
+                                        <p></p>
+                                    </div>
+                        
+                                    <div class="budget">
+                                        <h4>Budget <span>(approximate)</span></h4>
+                                        <div class="field">
+                                            <label for="budget-input" class="check-label">Budget</label><br>
+                                            <input type="text" name="budget" value="" size="40" class="input" id="budget-input">
+                                        </div>
+                                        <p></p>
+                                    </div>
+                                    <p></p>
+                                </div>
+                        
+                                <h4>How did you find out about us?</h4>
+                                <div class="checkbox-box">
+                                    <span class="checkbox-container">
+                                        <input type="checkbox" id="option-google" class="visuallyhidden" name="source[]" value="Google">&nbsp;<label for="option-google"><span>Google</span></label>
+                                    </span>
+                        
+                                    <span class="checkbox-container">
+                                        <input type="checkbox" id="option-bing" class="visuallyhidden" name="source[]" value="Bing">&nbsp;<label for="option-bing"><span>Bing</span></label>
+                                    </span>
+                        
+                                    <span class="checkbox-container">
+                                        <input type="checkbox" id="option-facebook" class="visuallyhidden" name="source[]" value="Facebook">&nbsp;<label for="option-facebook"><span>Facebook</span></label>
+                                    </span>
+                        
+                                    <span class="checkbox-container">
+                                        <input type="checkbox" id="option-linkedin" class="visuallyhidden" name="source[]" value="LinkedIn">&nbsp;<label for="option-linkedin"><span>LinkedIn</span></label>
+                                    </span>
+                                            
+                                    <span class="checkbox-container">
+                                        <input type="checkbox" id="option-instagram" class="visuallyhidden" name="source[]" value="Instagram">&nbsp;<label for="option-instagram"><span>Instagram</span></label>
+                                    </span>
+                                            
+                                    <span class="checkbox-container">
+                                        <input type="checkbox" id="option-magazine" class="visuallyhidden" name="source[]" value="Magazine">&nbsp;<label for="option-magazine"><span>Magazine</span></label>
+                                    </span>
+                                            
+                                    <span class="checkbox-container">
+                                        <input type="checkbox" id="option-radio" class="visuallyhidden" name="source[]" value="Radio">&nbsp;<label for="option-radio"><span>Radio</span></label>
+                                    </span>
+                                            
+                                    <span class="checkbox-container">
+                                        <input type="checkbox" id="option-recommendation" class="visuallyhidden" name="source[]" value="Recommendation">&nbsp;<label for="option-recommendation"><span>Recommendation</span></label>
+                                    </span>
+                                            
+                                    <span class="checkbox-container last">
+                                        <input type="checkbox" id="option-other" class="visuallyhidden" name="source[]" value="Other">&nbsp;<label for="option-other"><span>Other</span></label>
+                                    </span>
+                                </div>
+                                <p></p>
+                            </div>
                         </div>
 
                         <div class="submit-field">
@@ -397,7 +459,7 @@
                                     </svg>
                                 </span>
                             </button>
-                        </div>
+                        </div>                        
                     </form>
                 </div>
             </div>
@@ -462,27 +524,23 @@
 
                                 <div class="foot-form-con foot-form-con-1">
                                     <div>
-                                        <form action="index.html" method="post" class="" novalidate="novalidate">
+                                        <form action="index.html" method="post" class="">
                                                 <div class="box-row">
                                                     <div class="half-width width-30 align-self-end">
-                                                        <div class="input-container required-field">
-                                                            <span class="your-name">
-                                                                <input type="text" name="your-name" value="" size="40" id="footer-name" class="validate">
-                                                            </span>
+                                                        <div class="input-container inp-cont focus">
+                                                            <input type="text" name="your-name" value="" size="40" class="input" id="footer-name">                                                            
                                                             <br>
-                                                            <label for="your-name" class="action">Your name <span>*</span></label>
-                                                            <p id="footer-your-name"></p>
+                                                            <label for="your-name" class="">Your name <span>*</span></label>
+                                                            <p id="f-name-reqired"></p>
                                                         </div>
                                                     </div>
-                                                    
+ 
                                                     <div class="half-width width-30 align-self-end">
-                                                        <div class="input-container  required-field">
-                                                            <span class="your-email">
-                                                                <input type="email" name="your-email" value="" size="40" id="footer_email" class="validate">
-                                                            </span>
+                                                        <div class="input-container inp-cont focus">                                                            
+                                                            <input type="email" name="your-email" value="" size="40" id="footer-email" class="input">                                                            
                                                             <br>
-                                                            <label for="your-email" class="action">E-mail address <span>*</span></label>
-                                                            <p id="footer-your-email"></p>
+                                                            <label for="your-email" class="">E-mail address <span>*</span></label>
+                                                            <p id="f-email-reqired"></p>
                                                         </div>
                                                     </div>
 

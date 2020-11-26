@@ -1,26 +1,25 @@
 
 /* ინფუთების ვალიდაცია და დაბეჭდვა კონსოლში */ 
-var button = document.getElementById("start"); 
+var button = document.getElementById("start");
+var after_button = document.getElementById("start");
 var f_button = document.getElementById("subscribe");
-
-var inputName = getInput("your-name");
-var inputEmail = getInput("email");
-var inputNumber = getInput("phone-number");
-var inputCompany = getInput("your-company");
-var inputWebsite = getInput("your-website");
-var inputText = getInput("about-project");
-/*var inputLaunch = getInput("launchDate");
-var inputBudget = getInput("budget-input");*/
-var f_inputName = getInput("footer-name");
-var f_inputEmail = getInput("footer_email");
 
 
 button.addEventListener("click", function(){
+    var inputName = getInput("your-name");
+    var inputEmail = getInput("email");
+    var inputNumber = getInput("phone-number");
+    var inputCompany = getInput("your-company");
+    var inputWebsite = getInput("your-website");
+    var inputText = getInput("about-project");
+    var after_launch = getInput("launchDate");
+    var after_budget = getInput("budget-input");
+
     if(inputName == ""){
         updateValue_p("name-reqired", "The field is required.");
 
     }else{
-        console.log(inputName);
+        console.log("სახელი და გვარი: "+inputName);
     }
     
 
@@ -31,7 +30,7 @@ button.addEventListener("click", function(){
         updateValue_p("email-reqired", "The e-mail address entered is invalid.");
 
     }else{
-        console.log(inputEmail);
+        console.log("ელ.ფოსტა: "+ inputEmail);
     }
 
 
@@ -42,18 +41,12 @@ button.addEventListener("click", function(){
         updateValue_p("phone-reqired", "The telephone number is invalid.");
 
     }else{
-        console.log(inputNumber);
+        console.log("ტელ: "+inputNumber);
     }
 
-
-
-    if(inputCompany == ""){
-        console.log("");
-
-    }else{
-        console.log(inputCompany);
+    if(inputCompany !== ""){
+        console.log("კომპანია: "+inputCompany);
     }
-
 
 
     if(inputWebsite == ""){
@@ -63,7 +56,7 @@ button.addEventListener("click", function(){
         updateValue_p("website-reqired", "The URL is invalid.");
 
     }else{
-        console.log(inputWebsite);
+        console.log("ვებ.გვერდი: "+inputWebsite);
     }
 
 
@@ -71,42 +64,41 @@ button.addEventListener("click", function(){
         updateValue_p("project-reqired", "The field is required.");
 
     }else{
-        console.log(inputText);
-    }
-     /*if(inputLaunch == ""){
-        console.log('');
-
-    }else{
-        console.log(inputLaunch);
+        console.log("მოკლე ინფორმაცია: "+inputText);
+    }    
+    
+    if(after_launch !== ""){
+        console.log("დაწყების დრო: "+after_launch);
     }
 
-    if(inputBudget == ""){
-        console.log('');
-
-    }else{
-        console.log(inputBudget);
-    } */                      
+    if(after_budget !== ""){
+        console.log("სასურველი ბიუჯეტი: "+after_budget);
+    }
 });
 
 
 f_button.addEventListener("click", function(){
-    if(f_inputName == ""){
-        updateValue_p("footer-your-name", "The field is required.");
+    var f_inputName = getInput("footer-name");
+    var f_inputEmail = getInput("footer-email");
+    if(f_inputName==""){
+        updateValue_p("f-name-reqired","The field is required.")
 
     }else{
-        console.log(f_inputName);
+        console.log("გამომწერის სახელი: "+f_inputName);
     }
-
-    if(f_inputEmail==""){
-        updateValue_p("footer-your-email", "The field is required.");
+    
+    if(f_inputEmail == ""){
+        updateValue_p("f-email-reqired", "The field is required.");
 
     }else if(ValidateEmail(f_inputEmail) == false ){
-        updateValue_p("footer-your-email", "The e-mail address entered is invalid.");
+        updateValue_p("f-email-reqired", "The e-mail address entered is invalid.");
 
     }else{
-        console.log(f_inputEmail);
+        console.log("გამომწერის ელ.ფოსტა: "+f_inputEmail);
     }
 });
+
+
 
 // ინფუთიდან ველის ამოღების ფუნქცია აიდის მიხედვით.
 function getInput(id){
@@ -148,74 +140,49 @@ if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
     }
 }
 
-// დამატებითი ინფუთების შემოტანა იმ შემთხვევისათვის, როდესაც დავკლიკებთ შესაბამის კითხვის ველს.
-document.getElementById('add').addEventListener("click",addInput);
-function addInput(){
-var newInput = `
-    <div class="checkbox-fields">
-        <div class="added checkbox-after">
-            <div class="timeframe">
-                <h4>Timeframe <span>(approximate)</span></h4>
-                <div class="field"> 
-                   <label for="launchDate" class="check-label">Tell us about your timescale or deadline</label>
-                   <br>
-                    <input type="text" name="launch-date" value="" size="40" class="input" id="launchDate">                    
-                </div>
-                <p></p>
-            </div>
+// წავშალოთ დამატებითი ინფუთების შემოტანის კითხვა დაკლიკვის შემდეგ.
+function add_class_more_form() {
+   var element = document.getElementById("added");
+    element.classList.add("active");
 
-            <div class="budget">
-                <h4>Budget <span>(approximate)</span></h4>
-                <div class="field">
-                    <label for="budget-input" class="check-label">Budget</label><br>
-                    <input type="text" name="budget" value="" size="40" class="input" id="budget-input">
-                </div>
-                <p></p>
-            </div>
-            <p></p>
-        </div>
-
-        <h4>How did you find out about us?</h4>
-        <div class="checkbox-box">
-            <span class="checkbox-container">
-                <input type="checkbox" id="option-google" class="visuallyhidden" name="source[]" value="Google">&nbsp;<label for="option-google"><span>Google</span></label>
-            </span>
-
-            <span class="checkbox-container">
-                <input type="checkbox" id="option-bing" class="visuallyhidden" name="source[]" value="Bing">&nbsp;<label for="option-bing"><span>Bing</span></label>
-            </span>
-
-            <span class="checkbox-container">
-                <input type="checkbox" id="option-facebook" class="visuallyhidden" name="source[]" value="Facebook">&nbsp;<label for="option-facebook"><span>Facebook</span></label>
-            </span>
-
-            <span class="checkbox-container">
-                <input type="checkbox" id="option-linkedin" class="visuallyhidden" name="source[]" value="LinkedIn">&nbsp;<label for="option-linkedin"><span>LinkedIn</span></label>
-            </span>
-                    
-            <span class="checkbox-container">
-                <input type="checkbox" id="option-instagram" class="visuallyhidden" name="source[]" value="Instagram">&nbsp;<label for="option-instagram"><span>Instagram</span></label>
-            </span>
-                    
-            <span class="checkbox-container">
-                <input type="checkbox" id="option-magazine" class="visuallyhidden" name="source[]" value="Magazine">&nbsp;<label for="option-magazine"><span>Magazine</span></label>
-            </span>
-                    
-            <span class="checkbox-container">
-                <input type="checkbox" id="option-radio" class="visuallyhidden" name="source[]" value="Radio">&nbsp;<label for="option-radio"><span>Radio</span></label>
-            </span>
-                    
-            <span class="checkbox-container">
-                <input type="checkbox" id="option-recommendation" class="visuallyhidden" name="source[]" value="Recommendation">&nbsp;<label for="option-recommendation"><span>Recommendation</span></label>
-            </span>
-                    
-            <span class="checkbox-container last">
-                <input type="checkbox" id="option-other" class="visuallyhidden" name="source[]" value="Other">&nbsp;<label for="option-other"><span>Other</span></label>
-            </span>
-        </div>
-        <p></p>
-    </div>`;
-   document.getElementById('demo').innerHTML += newInput;
+    var x = document.getElementById('add');
+        x.style.display = 'none';
 }
 
 
+
+/** ფუნქცია, რომელიც გვეხმარება კლასის დამატებაში მშობელ ელემენტზე, ველზე დაკლიკების დროს.
+* * @param {Element} Element to search from
+* @param {string} The class name to identify target parent
+* @return {Element} The parent element with targetClass or null of we reach the top of the DOM tree
+**/ 
+function getTargetParent(elem, targetClass) {
+    var currElem = elem;
+    while(
+  	  currElem
+  	  && !currElem.classList.contains(targetClass)
+    ) {
+    	currElem = currElem.parentNode;
+    }
+    return currElem;
+}
+
+/**
+* დავამატოთ ველის კონტეინერს კლასი focus, როდესაც ველზე დავაკლიკებთ.
+**/
+function addFocusListener(elem, targetClass) {
+  var targetParent = getTargetParent(elem, targetClass);
+  if(targetParent) {
+		elem.addEventListener('focus', function() {
+	    targetParent.classList.add('focus');
+    });
+    elem.addEventListener('blur', function() {
+    	targetParent.classList.remove('focus');
+    });
+  }
+}
+
+var inputs = document.getElementsByClassName('input');
+for(var i = 0; i < inputs.length; i++) {
+	addFocusListener(inputs[i], 'inp-cont');
+}
