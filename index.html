@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="style.css">        
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7d85f262cb.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <title>Contact - Radical Web Design</title>
    <!--<script src="./console.js" defer></script>-->
        <script src="./JS.js" defer></script>  
@@ -79,17 +80,21 @@
 
                 <nav class="header-nav">
                     <ul class="nav-list">
-                        <li><a id="Home" title="Home" href="https://radicalwebdesign.co.uk/">Home</a></li>
-                        <li><a id="About" title="About" href="https://radicalwebdesign.co.uk/about/">About</a></li>
-                        <li><a id="Oure-Process" title="Oure Process" href="https://radicalwebdesign.co.uk/our-process/">Process</a></li>
-                        <li><a id="Services" title="Services" href="https://radicalwebdesign.co.uk/services/">Services</a></li>
-                        <li><a id="Worck" title="Worck" href="https://radicalwebdesign.co.uk/work/">Worck</a></li>
-                        <li><a id="Blog" title="Blog" href="https://radicalwebdesign.co.uk/blog/">Blog</a></li>
-                        <li><a id="Contact" title="Contact" href="https://radicalwebdesign.co.uk/contact/">Contact</a></li>
+                        <li class="hed_li"><a id="Home" title="Home" href="https://radicalwebdesign.co.uk/">Home</a></li>
+                        <li class="hed_li"><a id="About" title="About" href="https://radicalwebdesign.co.uk/about/">About</a></li>
+                        <li class="hed_li"><a id="Oure-Process" title="Oure Process" href="https://radicalwebdesign.co.uk/our-process/">Process</a></li>
+                        <li class="hed_li"><a id="Services" title="Services" href="https://radicalwebdesign.co.uk/services/">Services</a></li>
+                        <li class="hed_li"><a id="Worck" title="Worck" href="https://radicalwebdesign.co.uk/work/">Worck</a></li>
+                        <li class="hed_li"><a id="Blog" title="Blog" href="https://radicalwebdesign.co.uk/blog/">Blog</a></li>
+                        <li class="hed_li addsvg"><a id="Contact" title="Contact" href="https://radicalwebdesign.co.uk/contact/">Contact</a></li>
                     </ul>
                 </nav>
             </nav>
-
+            <script type="text/javascript"> 
+                $('.hed_li').hover(
+                function(){ $(this).addClass('addsvg') },
+                function(){ $(this).removeClass('addsvg') }) 
+            </script> 
             <div class="header-bottom">
                 <div class="main-container">
                     <aside class="bottom-left">

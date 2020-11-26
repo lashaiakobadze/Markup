@@ -228,6 +228,12 @@ body{
     }
 }
 
+@media (min-width: 992px){
+    .header-nav .nav-list li.addsvg a:before{
+        width: 3.5rem;
+    }
+}
+
 @media (min-width: 990px){
     .header-nav .nav-list li a:after {
         bottom: -.7rem;
@@ -235,6 +241,12 @@ body{
     }
 }
 
+@media (min-width: 992px){
+    .header-nav .nav-list li.addsvg a:after{
+        width: 3.5rem;
+    }
+}
+/*
 .header-nav .nav-list li:not(:last-child):hover{
     padding-top: 10px;
     padding-bottom: 10px;
@@ -262,7 +274,7 @@ body{
     border-right: 0;
     transition-delay: 10s;
 }
-
+*/
 /* გავსტილოთ ჰედერის ქვედა მხარე */
 .header .header-bottom{
     overflow: hidden;
@@ -737,7 +749,6 @@ body{
     display: block;
     font-family: "Poppins", sans-serif;
 }
-
 
 /********** გავსტილოთ მეორე სექცია, რომელიც შეიჩავს შესაყვან ველებს და ფორმას *******/
 /*

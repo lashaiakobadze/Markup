@@ -17,29 +17,23 @@ button.addEventListener("click", function(){
 
     if(inputName == ""){
         updateValue_p("name-reqired", "The field is required.");
-
     }else{
         console.log("სახელი და გვარი: "+inputName);
-    }
-    
+    }    
 
-    if(inputEmail==""){
+    if(inputEmail == ""){
         updateValue_p("email-reqired", "The field is required.");
 
     }else if(ValidateEmail(inputEmail) == false ){
         updateValue_p("email-reqired", "The e-mail address entered is invalid.");
-
     }else{
         console.log("ელ.ფოსტა: "+ inputEmail);
     }
 
-
-    if(inputNumber==""){
+    if(inputNumber == ""){
         updateValue_p("phone-reqired", "The field is required.");
-
     }else if(isValidPhone(inputNumber) == false){
         updateValue_p("phone-reqired", "The telephone number is invalid.");
-
     }else{
         console.log("ტელ: "+inputNumber);
     }
@@ -47,7 +41,6 @@ button.addEventListener("click", function(){
     if(inputCompany !== ""){
         console.log("კომპანია: "+inputCompany);
     }
-
 
     if(inputWebsite == ""){
         updateValue_p("website-reqired", "The field is required.");
@@ -59,14 +52,13 @@ button.addEventListener("click", function(){
         console.log("ვებ.გვერდი: "+inputWebsite);
     }
 
-
     if(inputText == ""){
         updateValue_p("project-reqired", "The field is required.");
 
     }else{
         console.log("მოკლე ინფორმაცია: "+inputText);
     }    
-    
+        
     if(after_launch !== ""){
         console.log("დაწყების დრო: "+after_launch);
     }
@@ -80,9 +72,9 @@ button.addEventListener("click", function(){
 f_button.addEventListener("click", function(){
     var f_inputName = getInput("footer-name");
     var f_inputEmail = getInput("footer-email");
+
     if(f_inputName==""){
         updateValue_p("f-name-reqired","The field is required.")
-
     }else{
         console.log("გამომწერის სახელი: "+f_inputName);
     }
@@ -92,7 +84,6 @@ f_button.addEventListener("click", function(){
 
     }else if(ValidateEmail(f_inputEmail) == false ){
         updateValue_p("f-email-reqired", "The e-mail address entered is invalid.");
-
     }else{
         console.log("გამომწერის ელ.ფოსტა: "+f_inputEmail);
     }
@@ -176,9 +167,13 @@ function addFocusListener(elem, targetClass) {
 		elem.addEventListener('focus', function() {
 	    targetParent.classList.add('focus');
     });
-    elem.addEventListener('blur', function() {
+    for(let i=0;i<inputs.length;i++){
+        if(inputs[i].value =='' )
+        elem.addEventListener('blur', function() {
     	targetParent.classList.remove('focus');
     });
+    }
+              
   }
 }
 
@@ -186,3 +181,16 @@ var inputs = document.getElementsByClassName('input');
 for(var i = 0; i < inputs.length; i++) {
 	addFocusListener(inputs[i], 'inp-cont');
 }
+
+//დავამატოთ ჰედერზე svg-ელემენტი რკალები შეხებისას, კლასის დამატებით.
+/*
+document.getElementsByClassName("nav-list").addEventListener("mouseover", function(e) {
+    const parent = e.target.parentElement;
+    parent.children.classList.add("addsvg");
+});
+    
+document.getElementsByClassName("dropdown")[0].addEventListener("mouseout", function(e) {
+    e.target.classList.remove("addsvg");
+});
+*/
+
