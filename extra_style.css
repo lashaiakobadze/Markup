@@ -1,0 +1,144 @@
+/* მენიუს დამატებითი ნავიგაციის გასტილვა */
+html.extra-menu {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 991.98px){
+    .extra-menu {
+    overflow-y: hidden;
+    }
+}
+
+body.extra-menu {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+@media (max-width: 991.98px){
+    .extra-menu .header-nav {
+        transform: translate(-100%);
+    }
+}
+
+.header-nav .nav-list {
+    font-size: 0;
+}
+
+.header-nav .nav-list li {
+    display: inline-block;
+}
+
+@media (max-width: 991.98px){
+    .header-nav .nav-list li {
+    display: block;
+    }
+}
+
+.header-nav .nav-list li a {
+    position: relative;
+    padding: .8rem 2.5rem;
+    font-family: "Poppins",sans-serif;
+    font-size: 1.8rem;
+    color: #fff;
+    border-bottom: .2rem solid transparent;
+}
+
+@media (max-width: 1199.98px){
+    .header-nav .nav-list li a {
+    padding: .8rem 1.5rem;
+    }
+}
+
+@media (max-width: 991.98px){
+    .header-nav .nav-list li a {
+    display: inline-block;
+    width: auto;
+    padding: .5rem 1.5rem 0;
+    font-size: 4rem;
+    }
+}
+
+@media (max-width: 991.98px){
+    .header-nav .nav-list li:not(:last-child):hover a {
+    color: #fff;
+    text-shadow: none;
+    border-bottom: .2rem solid #ec008c;
+    }
+}
+
+@media (max-width: 991.98px){
+    .header-nav .nav-list li.addsvg-contact a {
+    color: #fff;
+    text-shadow: none;
+    border-bottom: .2rem solid #ec008c;
+    }
+}
+
+/*   **********************************************  */
+.header .extra-social {
+    display: none;
+}
+
+@media (max-width: 991.98px){
+    .header .extra-social {
+    right: 0;
+    bottom: 5rem;
+    left: 0;
+    z-index: 105;
+    text-align: center;
+    }
+}
+
+@media (max-width: 991.98px){
+    .header .extra-social {
+    bottom: 3rem;
+    }
+}
+
+@media (max-width: 991.98px){
+    .extra-menu .extra-social {
+    position: fixed;
+    display: block;
+    }
+}
+
+@media (max-width: 991.98px){
+    .header .extra-social .social-media__list li {
+    display: inline-block;
+    margin: 0 1rem;
+    }
+}
+
+@media (max-width: 991.98px){
+    .header .extra-social a i {
+        font-size: 4rem;
+        opacity: .7;
+    }
+}
+
+@media (max-width: 991.98px){
+    .header .extra-social a i:hover {
+        color: #fff;       
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

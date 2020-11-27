@@ -1,3 +1,16 @@
+//დამატებითი მენიუს შემოტანა გატანა
+function add_class_html(){
+    var element = document.getElementById("html");
+    var x = document.getElementById("body");
+    
+    if (x.hasAttribute('class')&&element.hasAttribute('class')) {      
+        x.removeAttribute('class'); 
+        element.removeAttribute('class');   
+    } else {
+        x.setAttribute('class', 'extra-menu');
+        element.setAttribute('class',"extra-menu");
+    }
+}
 
 /* ინფუთების ვალიდაცია და დაბეჭდვა კონსოლში */ 
 var button = document.getElementById("start");
@@ -19,6 +32,7 @@ button.addEventListener("click", function(){
         updateValue_p("name-reqired", "The field is required.");
     }else{
         console.log("სახელი და გვარი: "+inputName);
+        remove.inputName;
     }    
 
     if(inputEmail == ""){
@@ -90,7 +104,6 @@ f_button.addEventListener("click", function(){
 });
 
 
-
 // ინფუთიდან ველის ამოღების ფუნქცია აიდის მიხედვით.
 function getInput(id){
     return document.getElementById(id).value;
@@ -139,7 +152,6 @@ function add_class_more_form() {
     var x = document.getElementById('add');
         x.style.display = 'none';
 }
-
 
 
 /** ფუნქცია, რომელიც გვეხმარება კლასის დამატებაში მშობელ ელემენტზე, ველზე დაკლიკების დროს.
@@ -193,4 +205,3 @@ document.getElementsByClassName("dropdown")[0].addEventListener("mouseout", func
     e.target.classList.remove("addsvg");
 });
 */
-
