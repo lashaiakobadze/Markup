@@ -2,7 +2,7 @@
 <html id="html">
     <head>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="./extra_style.css">        
+        <link rel="stylesheet" href="./extra_menu_style.css">        
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7d85f262cb.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -99,11 +99,7 @@
                     </ul>
                 </div>
             </nav>
-            <script type="text/javascript"> 
-                $('.hed_li').hover(
-                function(){ $(this).addClass('addsvg') },
-                function(){ $(this).removeClass('addsvg') }) 
-            </script> 
+ 
             <div class="header-bottom">
                 <div class="main-container">
                     <aside class="bottom-left">
@@ -330,14 +326,14 @@
                         <div class="form-box">
                             <div class="box-row">
 
-                            <div class="column form-col">                                   
+                                <div class="column form-col">                                   
                                     <div class="input-container inp-cont">
                                         <input type="text" name="your-name" value="" size="40" class="input" id="your-name">
                                         <br>
                                         <label for="your-name" class="" id="nameLabel" class="lab">Your name<span>*</span></label>  
                                         <p id="name-reqired"></p>
                                     </div>                                                                        
-                                  </div>
+                                </div>
 
                                 <div class="column form-col">
                                     <div class="input-container inp-cont">                           
@@ -533,7 +529,7 @@
 
                                 <div class="foot-form-con foot-form-con-1">
                                     <div>
-                                        <form action="index.html" method="post" class="">
+                                        <form action="index.html" method="post" id="f_userForm" class="">
                                                 <div class="box-row">
                                                     <div class="half-width width-30 align-self-end">
                                                         <div class="input-container inp-cont focus">
@@ -611,4 +607,9 @@
         </footer>
     </body>
 </html>
+<script type="text/javascript"> 
+    $('.hed_li').hover(
+    function(){ $(this).addClass('addsvg') },
+    function(){ $(this).removeClass('addsvg') }) 
+</script>
 

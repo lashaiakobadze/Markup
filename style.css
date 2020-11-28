@@ -815,15 +815,16 @@ body{
 
 .box-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
     margin-right: -1.5rem;
     margin-left: -1.5rem;
 }
 
+
 @media (min-width: 580px){
     .form-col {
-    flex: 0 0 33%;
-    max-width: 33%;
+        flex: 0 0 33%;
+        max-width: 33%;
     }
 }
 
@@ -1462,7 +1463,7 @@ a .fa-behance{
 
 @media (min-width: 1000px){
     .footer-form .main-container{
-        max-width: 1150px;
+        max-width: 1200px;
     }
 }
 
@@ -1472,6 +1473,21 @@ a .fa-behance{
     }
 }
 
+.footer-form .box-row {
+    display: flex;   
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
+}
+
+@media(max-width: 990px){
+    .footer-form .box-row{     
+    flex-wrap: wrap;    
+    }
+}
+
+.footer-form .box-row .text-center{
+    margin-right:-4rem;
+}
 
 .footer-form .box{
     position: relative;
@@ -1754,7 +1770,7 @@ a .fa-behance{
 @media (min-width: 580px){
     .half-width {
         flex: 0 0 50%;
-        max-width: 50%;
+        max-width: 40%;
     }
 }
 

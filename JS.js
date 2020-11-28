@@ -1,4 +1,6 @@
-//დამატებითი მენიუს შემოტანა გატანა
+/**
+* დამატებითი მენიუს შემოტანა გატანა დაკლიკებით.
+**/
 function add_class_html(){
     var element = document.getElementById("html");
     var x = document.getElementById("body");
@@ -17,7 +19,7 @@ var button = document.getElementById("start");
 var after_button = document.getElementById("start");
 var f_button = document.getElementById("subscribe");
 
-var inp1=false;
+var inp1=false;  
 var inp2=false;
 var inp3=false;
 var inp4=false;
@@ -33,8 +35,6 @@ var invalid_error1=false;
 var invalid_error2=false;
 var invalid_error3=false;
 
-var inp6=false;
-var inp7=false;
 button.addEventListener("click", function(){
     var inputName = getInput("your-name");
     var inputEmail = getInput("email");
@@ -149,6 +149,13 @@ button.addEventListener("click", function(){
     }  
 });
 
+var f_inp1=false;  
+var f_inp2=false;
+
+var f_error1=false;
+var f_error2=false;
+
+var f_invalid_error1=false;
 
 f_button.addEventListener("click", function(){
     var f_inputName = getInput("footer-name");
@@ -157,37 +164,64 @@ f_button.addEventListener("click", function(){
     if(f_inputName==""){
         updateValue_p("f-name-reqired","The field is required.")
         warning_inputs("footer-name");
-    }else{
-        console.log("გამომწერის სახელი: "+f_inputName);
+        f_error1=true;
+    }else if(f_error1==true){
+        document.getElementById("footer-name").classList.remove("red-input");
+        document.getElementById("f-name-reqired").innerHTML = "";
+        f_inp1=true;
+    }else{        
+        f_inp1=true;
     }
     
     if(f_inputEmail == ""){
         updateValue_p("f-email-reqired", "The field is required.");
         warning_inputs("footer-email");
+        f_error2=true;
     }else if(ValidateEmail(f_inputEmail) == false ){
         updateValue_p("f-email-reqired", "The e-mail address entered is invalid.");
         warning_inputs("footer-email");
+        f_invalid_error1=true;
+    }else if(f_error2==true || f_invalid_error1==true){
+        document.getElementById("footer-email").classList.remove("red-input");
+        document.getElementById("f-email-reqired").innerHTML = "";
+        f_inp2=true;
     }else{
+        f_inp2=true;        
+    }
+
+    if((f_inp1&&f_inp2)==true){
+        console.log("გამომწერის სახელი: "+f_inputName);
         console.log("გამომწერის ელ.ფოსტა: "+f_inputEmail);
+        resetForm("f_userForm");
+        f_inp1=false;
+        f_inp1=false;
     }
 });
 
- //ფუნქციების შეერთება my_func = joint([ my_func, new_func ]);
-
-// ინფუთიდან ველის ამოღების ფუნქცია აიდის მიხედვით.
+ /**
+* ინფუთიდან ველის ამოღების ფუნქცია აიდის მიხედვით.
+**/
 function getInput(id){
     return document.getElementById(id).value;
 }
 
-//გამაფრთხილებელი ფუნქცია
+/**
+* გამაფრთხილებელი ფუნქცია ტექსტური შეტყობინებით.
+**/
 function updateValue_p(id, message){
     document.getElementById(id).innerHTML = message;
 }
 
+/**
+* არსწორი ინფუთის სტილის კლასის დამატება.
+**/
 function warning_inputs(id){
     document.getElementById(id).classList.add("red-input");
 }
-//URL-ს ვალიდაცია
+
+/**
+* URL-ს ვალიდაცია
+**/
 function is_url(str){
     regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
     if (regexp.test(str)){
@@ -197,7 +231,9 @@ function is_url(str){
     }
 }
 
-// ტელეფონის ნომრის ვალიდაცია, მაგალითისათვის ჩვენი საქართველოს ცხრა ნიშნა ნომრისათვის შემდეგი სახით +995 568925408 ან 568925408 მოთხოვნის მიხედვით შევძლებთ შესაბამისი პატერნის აწყობას ან მოძიებას.
+/**
+* ტელეფონის ნომრის ვალიდაცია, მაგალითისათვის ჩვენი საქართველოს ცხრა ნიშნა ნომრისათვის შემდეგი სახით +995 568925408 ან 568925408 მოთხოვნის მიხედვით შევძლებთ შესაბამისი პატერნის აწყობას ან მოძიებას.
+**/ 
 function isValidPhone(phoneNumber) {
     var found = phoneNumber.search(/^(\+{1}\d{2,3}\s?[(]{1}\d{1,3}[)]{1}\s?\d+|\+\d{2,3}\s{1}\d+|\d+){1}[\s|-]?\d+([\s|-]?\d+){1,2}$/);
     if(found > -1) {
@@ -208,7 +244,9 @@ function isValidPhone(phoneNumber) {
     }
 }
 
-// email-ის ვალიდაცია
+/**
+* email-ის ვალიდაცია
+**/
 function ValidateEmail(mail) {
 if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail)){
     return true;
@@ -217,12 +255,16 @@ if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
     }
 }
 
-//ფორმის დარეზეთება
+/**
+* ფორმის დარესეთება
+**/
 function resetForm(id){
     document.getElementById(id).reset();
   }
 
-// წავშალოთ დამატებითი ინფუთების შემოტანის კითხვა დაკლიკვის შემდეგ.
+/**
+* წავშალოთ დამატებითი ინფუთების შემოტანის კითხვა დაკლიკვის შემდეგ.
+**/ 
 function add_class_more_form() {
    var element = document.getElementById("added");
     element.classList.add("active");
@@ -230,7 +272,6 @@ function add_class_more_form() {
     var x = document.getElementById('add');
         x.style.display = 'none';
 }
-
 
 /** ფუნქცია, რომელიც გვეხმარება კლასის დამატებაში მშობელ ელემენტზე, ველზე დაკლიკების დროს.
 * * @param {Element} Element to search from
@@ -257,14 +298,13 @@ function addFocusListener(elem, targetClass) {
 		elem.addEventListener('focus', function() {
 	    targetParent.classList.add('focus');
     });
-    for(let i=0;i<inputs.length;i++){
-        if(inputs[i].value =='' )
-        elem.addEventListener('blur', function() {
-    	targetParent.classList.remove('focus');
-    });
-    }
+        if(elem.value !== ""){
+            elem.addEventListener('blur', function() {
+    	    targetParent.classList.remove('focus');
+            });
+        }      
               
-  }
+    }              
 }
 
 var inputs = document.getElementsByClassName('input');
