@@ -326,7 +326,7 @@
             <div class="main-container">
                 <h1 class="form-title">Let’s get started</h1>
                 <div>                    
-                    <form action="index.html" method="post" class="contact-form">
+                    <form action="index.html" method="post" class="contact-form" id="userForm">
                         <div class="form-box">
                             <div class="box-row">
 
@@ -383,7 +383,6 @@
                                         <p id="project-reqired"></p>
                                     </div>
                                 </div>
-                                <p id="warning-box"></p>
                             </div>
                         </div>  
 
@@ -414,7 +413,7 @@
                                         </div>
                                     </div>
                                 </div>
-                        
+                                
                                 <h4>How did you find out about us?</h4>
                                 <div class="checkbox-box">
                                     <span class="checkbox-container">
@@ -458,14 +457,18 @@
                         </div>
 
                         <div class="submit-field">
-                            <button type="button" onclick="" id="start" class="button right-arrow pink-button"><strong>Submit</strong>
+                            <button type="button" onclick="resetForm()" id="start" class="button right-arrow pink-button"><strong>Submit</strong>
                                 <span class="arrow svg-container"><br>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 40">
                                         <path fill="#fff" d="M51.6 21.5c0-.1.1-.2.1-.3 0-.1.1-.2.1-.3 0-.1.1-.2.1-.3v-1.2c0-.1-.1-.2-.1-.3 0-.1 0-.2-.1-.3 0-.1-.1-.2-.1-.3 0-.1-.1-.2-.1-.3-.1-.1-.1-.2-.2-.2l-.2-.2L34.6.9C33.4-.3 31.5-.3 30.4.8 29.2 2 29.2 3.9 30.3 5l11.5 12H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h39L30.3 34.9c-1.2 1.2-1.1 3.1 0 4.2.6.6 1.3.9 2.1.9s1.6-.3 2.1-.9L51 22.2l.2-.2c.1-.1.1-.2.2-.2.2-.1.2-.2.2-.3z"></path>
                                     </svg>
                                 </span>
                             </button>
-                        </div>                        
+                        </div>
+
+                        <div id="warning-box" class="warning-box">
+                            One or more fields have an error. Please check and try again.
+                        </div>
                     </form>
                 </div>
             </div>

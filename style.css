@@ -1268,7 +1268,36 @@ label:after {
     color: inherit!important;
 }
 
+.warning-box{
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 1.7rem 2.2rem 1.7rem 6rem;
+    margin: 2.5rem 0 0;
+    font-family: "Poppins",sans-serif;
+    font-size: 0rem;
+    border-radius: 3rem;
+}
 
+.warning-box:before {
+    position: absolute;
+    top: 1.8rem;
+    left: 2.2rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    content: "";
+}
+
+.warning-box.erorr-form{
+    color: #e33a3a;
+    background: #fff4f4;
+    border: .2rem solid #e33a3a;
+    font-size: 1.8rem;
+}
+
+.warning-box.erorr-form:before {
+    background: url(./Assets/exit-icon.svg) no-repeat 50%/cover;
+}
 /* გავსტილოთ  ჩვენი გვერდის ბოლო  ნაწილი footer-ი */
 .footer-contact{
     padding: 5.5rem 0;
