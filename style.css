@@ -917,6 +917,9 @@ body{
     border-bottom: 1px solid #ec008c;
 }
 
+.contact-form .input-container input.red-input, .contact-form .input-container textarea.red-input{
+    border-bottom: 1px solid hsl(0, 100%, 46%);
+}
 
 /* გავსტილოთ კითხვის ღილაკი */
 .contact-form .more-form {
@@ -1643,6 +1646,9 @@ a .fa-behance{
     border-bottom: 1px solid #ec008c;
 }
 
+.footer-form .input-container input.red-input{
+    border-bottom: 1px solid hsl(0, 100%, 46%);
+}
 /*ღილაკის გასტილვა*/ 
 .width-25{
     position: relative;
@@ -1811,3 +1817,4 @@ form .input-container p{
     font-weight: 400;
     color: #e33a3a;
 }
+

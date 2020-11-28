@@ -30,24 +30,27 @@ button.addEventListener("click", function(){
 
     if(inputName == ""){
         updateValue_p("name-reqired", "The field is required.");
+        warning_inputs("your-name");
     }else{
         console.log("სახელი და გვარი: "+inputName);
-        remove.inputName;
     }    
 
     if(inputEmail == ""){
         updateValue_p("email-reqired", "The field is required.");
-
+        warning_inputs("email");
     }else if(ValidateEmail(inputEmail) == false ){
         updateValue_p("email-reqired", "The e-mail address entered is invalid.");
+        warning_inputs("email");
     }else{
         console.log("ელ.ფოსტა: "+ inputEmail);
     }
 
     if(inputNumber == ""){
         updateValue_p("phone-reqired", "The field is required.");
+        warning_inputs("phone-number");
     }else if(isValidPhone(inputNumber) == false){
-        updateValue_p("phone-reqired", "The telephone number is invalid.");
+        updateValue_p("phone-reqired", "The telephone number is invalid.")
+        warning_inputs("phone-number");
     }else{
         console.log("ტელ: "+inputNumber);
     }
@@ -58,17 +61,17 @@ button.addEventListener("click", function(){
 
     if(inputWebsite == ""){
         updateValue_p("website-reqired", "The field is required.");
-
+        warning_inputs("your-website");
     }else if(is_url(inputWebsite) == false){
         updateValue_p("website-reqired", "The URL is invalid.");
-
+        warning_inputs("your-website");
     }else{
         console.log("ვებ.გვერდი: "+inputWebsite);
     }
 
     if(inputText == ""){
         updateValue_p("project-reqired", "The field is required.");
-
+        warning_inputs("about-project");
     }else{
         console.log("მოკლე ინფორმაცია: "+inputText);
     }    
@@ -80,6 +83,14 @@ button.addEventListener("click", function(){
     if(after_budget !== ""){
         console.log("სასურველი ბიუჯეტი: "+after_budget);
     }
+    /**/
+    var p=this.getElementsByClassName("input");
+    for(var i=0;i<p.length;i++){
+        if(p[i].hasAttributeNS("class","red-input")==true){
+            document.getElementById("warning-box").classList.add("red-input");
+        }
+    }
+    
 });
 
 
@@ -89,15 +100,17 @@ f_button.addEventListener("click", function(){
 
     if(f_inputName==""){
         updateValue_p("f-name-reqired","The field is required.")
+        warning_inputs("footer-name");
     }else{
         console.log("გამომწერის სახელი: "+f_inputName);
     }
     
     if(f_inputEmail == ""){
         updateValue_p("f-email-reqired", "The field is required.");
-
+        warning_inputs("footer-email");
     }else if(ValidateEmail(f_inputEmail) == false ){
         updateValue_p("f-email-reqired", "The e-mail address entered is invalid.");
+        warning_inputs("footer-email");
     }else{
         console.log("გამომწერის ელ.ფოსტა: "+f_inputEmail);
     }
@@ -114,6 +127,9 @@ function updateValue_p(id, message){
     document.getElementById(id).innerHTML = message;
 }
 
+function warning_inputs(id){
+    document.getElementById(id).classList.add("red-input");
+}
 //URL-ს ვალიდაცია
 function is_url(str){
     regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
