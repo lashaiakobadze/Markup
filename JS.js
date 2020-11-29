@@ -298,7 +298,7 @@ function addFocusListener(elem, targetClass) {
 		elem.addEventListener('focus', function() {
 	    targetParent.classList.add('focus');
     });
-        if(elem.value !== ""){
+        if(elem.value == ""){
             elem.addEventListener('blur', function() {
     	    targetParent.classList.remove('focus');
             });
