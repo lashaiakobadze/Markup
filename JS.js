@@ -136,7 +136,7 @@ button.addEventListener("click", function(){
         if(after_budget !== ""){
             console.log("სასურველი ბიუჯეტი: "+after_budget);
         }        
-        resetForm("userForm");
+        resetForm("userForm");        
         document.getElementById("warning-box").classList.remove("erorr-form");
 
         inp1=false;
@@ -312,14 +312,23 @@ for(var i = 0; i < inputs.length; i++) {
 	addFocusListener(inputs[i], 'inp-cont');
 }
 
-//დავამატოთ ჰედერზე svg-ელემენტი რკალები შეხებისას, კლასის დამატებით.
-/*
-document.getElementsByClassName("nav-list").addEventListener("mouseover", function(e) {
-    const parent = e.target.parentElement;
-    parent.children.classList.add("addsvg");
+/**
+* ფოტოს ატვირთვის ფუნქციონალი.
+**/
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function (e) {
+            $('#profile').attr('src', e.target.result);
+        }
+        
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$("#image").change(function(){
+    readURL(this);
 });
-    
-document.getElementsByClassName("dropdown")[0].addEventListener("mouseout", function(e) {
-    e.target.classList.remove("addsvg");
-});
-*/
+
+ 

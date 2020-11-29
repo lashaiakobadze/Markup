@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html id="html">
     <head>
+        <title>Contact - Radical Web Design</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="./extra_menu_style.css">        
+        <link rel="stylesheet" href="./extra_menu_style.css">   
+        <link rel="stylesheet" href="./Upload_img.css">
+        <script src="./JS.js" defer></script>     
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7d85f262cb.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <title>Contact - Radical Web Design</title>
-        <script src="./JS.js" defer></script>  
-    </head>
+        </head>
     <body id="body">
 <!-- header-ი, ჩვენი გვერდის უმთავრესი და საწყისი ნაწილი -->
         <header id="headerID" class="header">
@@ -39,8 +41,8 @@
                                     <stop offset=".864" stop-color="#fff"></stop>
                                     <stop offset="1" stop-color="#fff"></stop>
                                 </linearGradient>
-                                <path clip-path="url(#e)" fill="url(#f)" d="M13.909 40.274l61.59-41.339 40.322 60.076-61.588 41.346z"></path
-                                    ><defs><path id="g" d="M36.798 24.909h56.135v73.827H36.798z"></path></defs>
+                                <path clip-path="url(#e)" fill="url(#f)" d="M13.909 40.274l61.59-41.339 40.322 60.076-61.588 41.346z"></path>
+                                <defs><path id="g" d="M36.798 24.909h56.135v73.827H36.798z"></path></defs>
                                     <clipPath id="h">
                                         <use xlink:href="#g" overflow="visible"></use>
                                     </clipPath>
@@ -448,8 +450,17 @@
                                         <input type="checkbox" id="option-other" class="checkbox-vis-hidden" name="" value="Other">&nbsp;<label for="option-other"><span>Other</span></label>
                                     </span>
                                 </div>
-                                <p></p>
-                            </div>
+
+                                <div class="img-box">
+                                    <div class="upload_img">
+                                        <img height="400" width="400" id="company_logo" src="./Assets/noimage.png" alt="profile-image" />
+                                    </div>                               
+                                    
+                                    <div class="image_upload_input">
+                                        <input id="image" type="file" name="logo_photo" capture>Upload logo</input>
+                                    </div>
+                                </div>
+                            </div>                            
                         </div>
 
                         <div class="submit-field">
@@ -479,7 +490,7 @@
                             <address class="company-address">The Sharp Project, Thorp Road, Manchester, M40 5BJ.</address>
                             <div class="company-connection">
                                 <a href="#" class="phone">
-                                    <span class="icon svg-container" aria-hidden="true">
+                                    <span class="icon svg-container">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <path fill="#ec008c" d="M19 2a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V2zm-8.5 0h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1zM12 22a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm5-3H7V4.976h10V19z"></path>
                                         </svg>
@@ -487,12 +498,12 @@
                                     <strong class="meta">+44 (0) 161 818 6861</strong>
                                 </a>
                                 <a href="#" class="mail">
-                                    <span class="icon svg-container" aria-hidden="true">
+                                    <span class="icon svg-container">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                             <path fill="#ec008c" d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.104 10-8.104V19H2z"></path>
                                         </svg>
                                     </span>
-                                        <strong class="meta">hello@radical.agency</strong>
+                                    <strong class="meta">hello@radical.agency</strong>
                                 </a>
                             </div>
                         </aside>
@@ -560,7 +571,6 @@
                                                             </span>
                                                         </button>
                                                     </div>
-
                                                 </div>
                                                 <p class="privacy">Check our <a href="" target="_blank">Privacy Policy</a>
                                                      to learn how do we store and use your personal details. You can unsubscribe anytime.
@@ -609,7 +619,6 @@
 </html>
 <script type="text/javascript"> 
     $('.hed_li').hover(
-    function(){ $(this).addClass('addsvg') },
-    function(){ $(this).removeClass('addsvg') }) 
-</script>
-
+        function(){ $(this).addClass('addsvg') },
+        function(){ $(this).removeClass('addsvg') })
+    </script>

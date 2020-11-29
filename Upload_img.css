@@ -1,0 +1,31 @@
+.img-box{
+    align-items: center;
+    margin: 10px;
+    padding-left: 30%;
+}
+
+@media(max-width:770px){
+    .img-box{
+        padding-left: 10%;
+    }    
+}
+
+@media(max-width:330px){
+    .img-box{
+        padding-left: 0%;
+    }    
+}
+
+.upload_img{
+    align-items: center;
+}
+
+.image_upload_input{
+    padding-top: 10px;
+    color: #ec008c;
+}
+  
+.img-box input{
+    color: #454545;
+}
+
