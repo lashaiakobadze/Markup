@@ -453,11 +453,11 @@
 
                                 <div class="img-box">
                                     <div class="upload_img">
-                                        <img height="400" width="400" id="company_logo" src="./Assets/noimage.png" alt="profile-image" />
+                                        <img height="400" width="400" id="company_logo" src="./Assets/noimage.png" alt="logo-image" />
                                     </div>                               
                                     
                                     <div class="image_upload_input">
-                                        <input id="image" type="file" name="logo_photo" capture>Upload logo</input>
+                                        <input id="image" type="file" name="logo_photo" capture>upload logo picture</input>
                                     </div>
                                 </div>
                             </div>                            
@@ -621,4 +621,21 @@
     $('.hed_li').hover(
         function(){ $(this).addClass('addsvg') },
         function(){ $(this).removeClass('addsvg') })
-    </script>
+</script>
+<script>
+    $("#image").change(function(){
+    readURL(this);
+});
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        
+        reader.onload = function (e) {
+            $('#company_logo').attr('src', e.target.result);
+        }
+        
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+</script> 

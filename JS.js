@@ -298,7 +298,7 @@ function addFocusListener(elem, targetClass) {
 		elem.addEventListener('focus', function() {
 	    targetParent.classList.add('focus');
     });
-        if(elem.value == ""){
+        if(elem.value !== ""){
             elem.addEventListener('blur', function() {
     	    targetParent.classList.remove('focus');
             });
@@ -312,23 +312,6 @@ for(var i = 0; i < inputs.length; i++) {
 	addFocusListener(inputs[i], 'inp-cont');
 }
 
-/**
-* ფოტოს ატვირთვის ფუნქციონალი.
-**/
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        
-        reader.onload = function (e) {
-            $('#profile').attr('src', e.target.result);
-        }
-        
-        reader.readAsDataURL(input.files[0]);
-    }
-}
 
-$("#image").change(function(){
-    readURL(this);
-});
 
  
