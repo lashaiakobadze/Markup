@@ -293,24 +293,33 @@ function getTargetParent(elem, targetClass) {
 * დავამატოთ ველის კონტეინერს კლასი focus, როდესაც ველზე დავაკლიკებთ.
 **/
 function addFocusListener(elem, targetClass) {
-  var targetParent = getTargetParent(elem, targetClass);
-  if(targetParent) {
-		elem.addEventListener('focus', function() {
-	    targetParent.classList.add('focus');
-    });
-        if(elem.value !== ""){
-            elem.addEventListener('blur', function() {
-    	    targetParent.classList.remove('focus');
-            });
-        }      
-              
-    }              
-}
-
-var inputs = document.getElementsByClassName('input');
-for(var i = 0; i < inputs.length; i++) {
-	addFocusListener(inputs[i], 'inp-cont');
-}
+    var targetParent = getTargetParent(elem, targetClass);
+    if(targetParent) {
+          elem.addEventListener('focus', function() {
+          targetParent.classList.add('focus');
+      });
+          if(elem.value == ""){
+              elem.addEventListener('blur', function() {
+              targetParent.classList.remove('focus');
+              });
+          }      
+                
+      } 
+      elem.onchange = function(){
+          if(elem.value !== ""){
+              elem.addEventListener('blur', function() {
+              targetParent.classList.add('focus');
+              });
+          } 
+          else{
+          }     
+      }             
+  }
+  
+  var inputs = document.getElementsByClassName('input');
+  for(var i = 0; i < inputs.length; i++) {
+      addFocusListener(inputs[i], 'inp-cont');
+  }
 
 
 
