@@ -592,10 +592,13 @@ body{
 }
 
 .button .extra-inner:after {
-    width: 55%;
-    transition: all .3s ease-in-out;
+    width: 50%;
+    transition: all .4s ease-in-out;
 }
 
+.button:hover .extra-inner:after{
+    width: 100%;
+}
 
 /*********ვიწყებთ ჰედერის შემდგომი სექციის გასტილვას, რომელიც შეიცავს გვერდის საინფორმაციო ბმულებს*******/
 .sec1{
@@ -856,6 +859,11 @@ body{
     width: 100%;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
+}
+
+.width-66{
+    padding-left: 13px;
+    width:66%;
 }
 
 .contact-form .input-container input, .contact-form .input-container textarea {
@@ -1256,6 +1264,10 @@ label:after {
     vertical-align: middle;
     transition: all .3s ease-in-out;
     transform: rotate(0deg);
+}
+
+.right-arrow:hover .arrow{
+    transform: rotate(360deg);
 }
 
 .pink-button .arrow, .pink-button:focus .arrow, .pink-button:hover .arrow {
