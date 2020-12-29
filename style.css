@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
-/*გავსტილოთ ზოგადი დანიშნულების სტილისტური მარეგულირებლები*/
+/**/
 *, :after, :before {
     box-sizing: border-box;
 }
@@ -66,7 +66,7 @@ body{
 }
 
 
-/**************************** გავსტილოთ ჰედერი ***************************************/
+/**************************** header ***************************************/
 .header {
     background-repeat: no-repeat;
     background-position: 50%;
@@ -80,7 +80,7 @@ body{
 }
 
 
-/*გავსტილოთ მთავარი სანავიგაციო ელემენტი ჰედერში */
+/* */
 .header .navigation{
     padding: 0 4rem;
     position: relative;
@@ -98,7 +98,7 @@ body{
 }
 
 
-/* გავსტილოთ ლოგო */
+/*  */
 .main-logo {
     position: relative;
     z-index: 105;
@@ -131,7 +131,7 @@ body{
 }
 
 
-/* გავსტილოთ ჰედერის ნავგაცია */
+/* */
 .header-nav .nav-list li {
     display: inline-block;
 }
@@ -204,7 +204,7 @@ body{
 }
 
 
-/*დავამატოთ svg ელემენტები ნავიგაციასთან მისვლის დროს */
+/* */
 @media (min-width: 990px)
 {
     .header-nav .nav-list li a:after, .header-nav .nav-list li a:before {
@@ -259,7 +259,7 @@ body{
     }
 }
 
-/* გავსტილოთ ჰედერის ქვედა მხარე */
+/* */
 .header .header-bottom{
     overflow: hidden;
 }
@@ -303,7 +303,7 @@ body{
 }
 
 
-/*ჰედერის ქვედა მარცხება კუთხის გასტილვა*/
+/* */
 .bottom-left{
     float: left;
     margin-left: 0rem;
@@ -416,7 +416,7 @@ body{
     content: "\BB";
 }
 
-/*გავსტილოთ ქვედა მარჯვენა კუთხე*/
+/* */
 .bottom-right{
     float: right;
     width: 60rem; 
@@ -455,7 +455,7 @@ body{
 }
 
 
-/* გავსტილოთ ჩამოსაშლელი მენიუ, რომელიც ჰედერში გამოჩნდება რეზულოციის შემცირებისას */
+/* */
 .header-menu{
     z-index: 103;
     display: none;
@@ -483,7 +483,7 @@ body{
 }
 
 
-/* გავსტილოთ ჩანისაშლელი მენიუს სამშრიანი სტილისტური ღილაკი */
+/* */
 .button{
     display: inline-block;
     width: 4rem;
@@ -600,7 +600,7 @@ body{
     width: 100%;
 }
 
-/*********ვიწყებთ ჰედერის შემდგომი სექციის გასტილვას, რომელიც შეიცავს გვერდის საინფორმაციო ბმულებს*******/
+/********* sec1 *******/
 .sec1{
     padding: 7rem 0;
     background: #f8f8f8;
@@ -702,7 +702,7 @@ body{
 }
 
 
-/* გავსტილოთ svg ელემენტის ტექსტური ინფორმაცია */
+/* */
 .aside-block .block-info{
     text-align: center;
     word-wrap: break-word;
@@ -744,7 +744,7 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-/********** გავსტილოთ მეორე სექცია, რომელიც შეიჩავს შესაყვან ველებს და ფორმას *******/
+/********** sec2 *******/
 /*
 .contact-form{
     overflow: hidden;
@@ -799,7 +799,7 @@ body{
 }
 
 
-/* გავსტილოთ ფორმის შესაყვანი ველები */
+/* */
 .contact-form {
     display: table;
     width: 100%;
@@ -930,7 +930,7 @@ body{
     border-bottom: 1px solid hsl(0, 100%, 46%);
 }
 
-/* გავსტილოთ კითხვის ღილაკი */
+/* */
 .contact-form .more-form {
     margin: 0 0 4.5rem;
     text-align: center;
@@ -975,7 +975,7 @@ body{
     display: none;
 }
 
-/* გავსტილოთ დამატებითი ინფუთები, რომლებიც შემოდის ჩვენი გამოძახების შემდგომ */
+/* */
 .contact-form .add-form {
     overflow: hidden;
     visibility: hidden;
@@ -1105,7 +1105,7 @@ body{
     content: "";
 }
 
-/* გავსტილოთ ჩეკბოქსები */
+/* */
 .contact-form .checkbox-fields .checkbox-box {
     overflow: hidden;
 }
@@ -1214,7 +1214,7 @@ label:after {
     opacity: 1;
     transform: scale(1);
 }
-/* გავსტილოთ ღილაკები */
+/* */
 .contact-form .submit-field {
     float: left;
     width: 100%;
@@ -1311,7 +1311,7 @@ label:after {
 .warning-box.erorr-form:before {
     background: url(./Assets/exit-icon.svg) no-repeat 50%/cover;
 }
-/* გავსტილოთ  ჩვენი გვერდის ბოლო  ნაწილი footer-ი */
+/* footer */
 .footer-contact{
     padding: 5.5rem 0;
     background: #f8f8f8;
@@ -1339,7 +1339,7 @@ label:after {
     }
 }
 
-/* fotter-ის მარცხენა კაონტეინერის გასტილვა */
+/* */
 .max-width {
     flex: 0 0 100%;
     max-width: 100%;
@@ -1410,7 +1410,7 @@ label:after {
 }
 
 
-/* გავსტილოთ footer-ის მარჯვენა კონტეინერი */
+/* */
 .social-contact{
     margin-right: 2rem;
 }
@@ -1468,7 +1468,7 @@ a .fa-behance{
 }
 
 
-/* გავსტილოთ footer-ის მეორე სექცია ფორმა */
+/* */
 .footer-form {
     background: linear-gradient(180deg,#f8f8f8 50%,#27376c 0);
 } 
@@ -1516,7 +1516,7 @@ a .fa-behance{
     }
 }
 
-/* გავსტილოთ ფორმა */
+/* */
 @media (min-width: 768px){
     .footer-form .icon {
         position: absolute;
@@ -1605,7 +1605,7 @@ a .fa-behance{
 }
 
 
-/* გავსტილოთ  footer-ის ფორმის ველები და ღილაკი */
+/* */
 .foot-form-con{
     position: relative;
     width: 100%;
@@ -1706,7 +1706,7 @@ a .fa-behance{
 .footer-form .input-container input.red-input{
     border-bottom: 1px solid hsl(0, 100%, 46%);
 }
-/*ღილაკის გასტილვა*/ 
+/* */ 
 .width-25{
     position: relative;
     width: 100%;
@@ -1753,7 +1753,7 @@ a .fa-behance{
 }
 
 
-/* გავსტილოთ footer-ის მესამე სექცია */
+/* */
 .footer-privacy{
     padding: 4.3rem 0;
     background: #27376c;
