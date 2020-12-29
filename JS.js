@@ -1,5 +1,5 @@
 /**
-* დამატებითი მენიუს შემოტანა გატანა დაკლიკებით.
+* 
 **/
 function add_class_html(){
     var element = document.getElementById("html");
@@ -14,7 +14,7 @@ function add_class_html(){
     }
 }
 
-/* ინფუთების ვალიდაცია და დაბეჭდვა კონსოლში */ 
+/*  */ 
 var button = document.getElementById("start");
 var after_button = document.getElementById("start");
 var f_button = document.getElementById("subscribe");
@@ -199,28 +199,28 @@ f_button.addEventListener("click", function(){
 });
 
  /**
-* ინფუთიდან ველის ამოღების ფუნქცია აიდის მიხედვით.
+* 
 **/
 function getInput(id){
     return document.getElementById(id).value;
 }
 
 /**
-* გამაფრთხილებელი ფუნქცია ტექსტური შეტყობინებით.
+* 
 **/
 function updateValue_p(id, message){
     document.getElementById(id).innerHTML = message;
 }
 
 /**
-* არსწორი ინფუთის სტილის კლასის დამატება.
+* 
 **/
 function warning_inputs(id){
     document.getElementById(id).classList.add("red-input");
 }
 
 /**
-* URL-ს ვალიდაცია
+* 
 **/
 function is_url(str){
     regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
@@ -232,7 +232,7 @@ function is_url(str){
 }
 
 /**
-* ტელეფონის ნომრის ვალიდაცია, მაგალითისათვის ჩვენი საქართველოს ცხრა ნიშნა ნომრისათვის შემდეგი სახით +995 568925408 ან 568925408 მოთხოვნის მიხედვით შევძლებთ შესაბამისი პატერნის აწყობას ან მოძიებას.
+*
 **/ 
 function isValidPhone(phoneNumber) {
     var found = phoneNumber.search(/^(\+{1}\d{2,3}\s?[(]{1}\d{1,3}[)]{1}\s?\d+|\+\d{2,3}\s{1}\d+|\d+){1}[\s|-]?\d+([\s|-]?\d+){1,2}$/);
@@ -245,7 +245,7 @@ function isValidPhone(phoneNumber) {
 }
 
 /**
-* email-ის ვალიდაცია
+*
 **/
 function ValidateEmail(mail) {
 if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail)){
@@ -256,14 +256,14 @@ if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
 }
 
 /**
-* ფორმის დარესეთება
+* 
 **/
 function resetForm(id){
     document.getElementById(id).reset();
   }
 
 /**
-* წავშალოთ დამატებითი ინფუთების შემოტანის კითხვა დაკლიკვის შემდეგ.
+*
 **/ 
 function add_class_more_form() {
    var element = document.getElementById("added");
@@ -273,7 +273,7 @@ function add_class_more_form() {
         x.style.display = 'none';
 }
 
-/** ფუნქცია, რომელიც გვეხმარება კლასის დამატებაში მშობელ ელემენტზე, ველზე დაკლიკების დროს.
+/** 
 * * @param {Element} Element to search from
 * @param {string} The class name to identify target parent
 * @return {Element} The parent element with targetClass or null of we reach the top of the DOM tree
@@ -290,7 +290,7 @@ function getTargetParent(elem, targetClass) {
 }
 
 /**
-* დავამატოთ ველის კონტეინერს კლასი focus, როდესაც ველზე დავაკლიკებთ.
+*
 **/
 function addFocusListener(elem, targetClass) {
     var targetParent = getTargetParent(elem, targetClass);
